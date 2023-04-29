@@ -18,7 +18,19 @@ public class GameWindow extends JFrame {
     public GameWindow() {
         setTitle("La Paradoja del Crononauta"); // Establece el título de la ventana.
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Cierra la aplicación cuando se cierra la ventana.
-        setPreferredSize(new Dimension(1920, 1280)); // Establece el tamaño preferido de la ventana.
+        /*setPreferredSize(new Dimension(1920, 1280)); // Establece el tamaño preferido de la ventana.
+        // Evita que la ventana se redimensione
+        setResizable(false);*/
+        // Obtener el tamaño de la pantalla, excluyendo la barra de tareas
+        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+        Rectangle bounds = ge.getMaximumWindowBounds();
+        setSize(bounds.getSize());
+
+        // Establecer la ventana en la posición y el tamaño deseados
+        setPreferredSize(bounds.getSize());
+        setMinimumSize(new Dimension(800, 600)); // Establecer un tamaño mínimo si lo deseas
+        setLocation(bounds.getLocation());
+
         
         // Carga la imagen del ícono desde la carpeta de recursos
         ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("recursos/assets/imagenes/icons/game_icon.png"));
