@@ -24,6 +24,7 @@ public class ImagePanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         // Dibuja la imagen escalada para llenar el panel
-        g.drawImage(image, 0, 0, this.getWidth(), this.getHeight(), this);
+        Image scaledImage = image.getScaledInstance(this.getWidth(), this.getHeight(), Image.SCALE_SMOOTH);
+        g.drawImage(scaledImage, 0, 0, this);
     }
 }

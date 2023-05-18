@@ -6,7 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GameWindow extends JFrame {
-    //private Juego juego;
+    private Juego juego;
     private MenuInicio menuInicio;
     //private MenuConfiguracion menuConfiguracion;
     private CardLayout cardLayout;
@@ -27,7 +27,9 @@ public class GameWindow extends JFrame {
         setSize(bounds.getSize());
         
         // Establecer la ventana en la posición y el tamaño deseados
+        //setExtendedState(JFrame.MAXIMIZED_BOTH);
         setPreferredSize(bounds.getSize());
+        
         setMinimumSize(new Dimension(912, 513)); // Establecer un tamaño mínimo si lo deseas
         setLocation(bounds.getLocation());
         
@@ -36,29 +38,25 @@ public class GameWindow extends JFrame {
         // Establece la imagen como ícono de la ventana
         setIconImage(icon.getImage());
                 
-
-        // Crear las diferentes "pantallas" del juego
-        //juego = new Juego();
-        menuInicio = new MenuInicio();
-        //menuConfiguracion = new MenuConfiguracion();
-
         // Configurar un CardLayout para cambiar entre las "pantallas"
         cardLayout = new CardLayout();
         mainPanel = new JPanel(cardLayout);
-        mainPanel.setOpaque(false); // Esto hace que el mainPanel sea transp
+        mainPanel.setOpaque(false); // Esto hace que el mainPanel sea transparente
         
-        // Aplicar el fondo a la ventana principal
-        setContentPane(menuInicio.getBackgroundPanel());
-        
-        mainPanel.add(menuInicio, "MenuInicio");
+        // Crear las diferentes "pantallas" del juego
+        juego = new Juego();
+        menuInicio = new MenuInicio(this);
+        //menuConfiguracion = new MenuConfiguracion();
+
+        mainPanel.add(menuInicio.getBackgroundPanel(), "MenuInicio");
         //mainPanel.add(menuConfiguracion, "MenuConfiguracion");
-        //mainPanel.add(juego, "Juego");
+        mainPanel.add(juego.getEscenarioActual(), "Juego");
 
         // Mostrar el menu de inicio por defecto
         cardLayout.show(mainPanel, "MenuInicio");
-
-        // Añadir el panel principal a la ventana
-        getContentPane().add(mainPanel); // Añade mainPanel al panel de contenido en lugar de a la ventana
+        
+        // Establecer mainPanel como el panel de contenido de la ventana
+        setContentPane(mainPanel);
 
         // Ajusta el tamaño de la ventana según sus componentes y la centra en la pantalla.
         pack();
@@ -70,6 +68,14 @@ public class GameWindow extends JFrame {
     public void cambiarAPantalla(String nombrePantalla) {
         cardLayout.show(mainPanel, nombrePantalla);
     }
+
+    public void iniciarNuevoJuego() {
+        // Iniciar la historia del juego
+        juego.iniciarHistoria();
+
+        // Cambiar la vista a la pantalla del juego
+        cambiarAPantalla("Juego");
+    }    
 
     
     // Método para iniciar el juego. Se llama cuando el jugador selecciona "Nuevo Juego" en el menú de inicio.
