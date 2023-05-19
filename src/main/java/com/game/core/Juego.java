@@ -35,7 +35,8 @@ public class Juego {
     public void iniciarHistoria() {
         // Llamas al método cargarDialogos y guardas el resultado en una variable
         Map<String, ArrayList<JSONObject>> dialogosPorPantalla = cargarDialogos();
-        dialogPanel = new DialogPanel(dialogosPorPantalla);
+        // Crear un nuevo DialogPanel y agregarlo al escenario
+        dialogPanel = new DialogPanel(dialogosPorPantalla,this);
         escenarioActual.addPanel(dialogPanel, BorderLayout.SOUTH);
     }
 

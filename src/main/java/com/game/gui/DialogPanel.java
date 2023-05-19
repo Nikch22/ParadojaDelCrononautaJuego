@@ -1,5 +1,6 @@
 package main.java.com.game.gui;
 
+import main.java.com.game.core.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -20,10 +21,13 @@ public class DialogPanel extends JPanel {
     private int pantallaActualIndex = 1;
     private String pantallaActual = "pantalla" + pantallaActualIndex;
     private Image backgroundImage;
-
-    public DialogPanel(Map<String, ArrayList<JSONObject>> dialogosPorPantalla) {
-        this.dialogos = dialogosPorPantalla;
-        // Asegúrate de cambiar la ruta a tu imagen de fondo real
+    private Juego referenciaJuego;
+    private String nuevoEscenarioPath;
+    
+   public DialogPanel(Map<String, ArrayList<JSONObject>> dialogosPorPantalla, Juego referenciaJuego) {
+       this.referenciaJuego = referenciaJuego;
+       this.dialogos = dialogosPorPantalla;
+        // Asignno Background del panel de dialogos
         String backgroundImagePath = "/recursos/assets/imagenes/dialogos_1.png";
         backgroundImage = new ImageIcon(getClass().getResource(backgroundImagePath)).getImage();
 
@@ -118,7 +122,11 @@ public class DialogPanel extends JPanel {
                             } else {
                                 frase = (String) dialogo.get("frase");
                             }
-
+                            
+                            if (dialogoActual == 3) {
+                            nuevoEscenarioPath = "/recursos/assets/imagenes/backgrounds/p1_bg_2.jpg";
+                            setNuevoEscenario(nuevoEscenarioPath);
+                            }
                             setDialogCharacterImage(personaje);
                             setDialogText(frase);
                         } else {
@@ -165,5 +173,12 @@ public class DialogPanel extends JPanel {
         SimpleAttributeSet center = new SimpleAttributeSet();
         StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
         doc.setParagraphAttributes(0, doc.getLength(), center, false);
+    }
+
+    public void setNuevoEscenario(String pathNuevoEscenario) {
+       Escenario escenarioActual = referenciaJuego.getEscenarioActual();
+       escenarioActual.removePanel(DialogPanel.this);
+       escenarioActual.setImageBackground(pathNuevoEscenario);
+       escenarioActual.addPanel(DialogPanel.this, BorderLayout.SOUTH);
     }
 }
