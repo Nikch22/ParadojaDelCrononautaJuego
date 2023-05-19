@@ -1,5 +1,6 @@
 package main.java.com.game.gui;
 
+import main.java.com.game.core.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -14,10 +15,13 @@ public class DialogPanel extends JPanel {
     private String[] dialogos;
     private int dialogoActual = 0;
     private Image backgroundImage;
-
-   public DialogPanel(String[] dialogos) {
+    private Juego referenciaJuego;
+    private String nuevoEscenarioPath;
+    
+   public DialogPanel(String[] dialogos, Juego referenciaJuego) {
+       this.referenciaJuego = referenciaJuego;
        this.dialogos = dialogos;
-        // Asegúrate de cambiar la ruta a tu imagen de fondo real
+        // Asignno Background del panel de dialogos
         String backgroundImagePath = "/recursos/assets/imagenes/dialogos_1.png";
         backgroundImage = new ImageIcon(getClass().getResource(backgroundImagePath)).getImage();
 
@@ -96,6 +100,10 @@ public class DialogPanel extends JPanel {
                 dialogoActual++;
                 if (dialogoActual < dialogos.length) {
                     setDialogText(dialogos[dialogoActual]);
+                    if (dialogoActual == 3) {
+                        nuevoEscenarioPath = "/recursos/assets/imagenes/backgrounds/p1_bg_2.jpg";
+                        setNuevoEscenario(nuevoEscenarioPath);
+                    }
                 }
             }
         });
@@ -116,5 +124,12 @@ public class DialogPanel extends JPanel {
         SimpleAttributeSet center = new SimpleAttributeSet();
         StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
         doc.setParagraphAttributes(0, doc.getLength(), center, false);
+    }
+
+    public void setNuevoEscenario(String pathNuevoEscenario) {
+       Escenario escenarioActual = referenciaJuego.getEscenarioActual();
+       escenarioActual.removePanel(DialogPanel.this);
+       escenarioActual.setImageBackground(pathNuevoEscenario);
+       escenarioActual.addPanel(DialogPanel.this, BorderLayout.SOUTH);
     }
 }

@@ -29,7 +29,7 @@ public class Juego {
             "Adiós"
         };
         // Crear un nuevo DialogPanel y agregarlo al escenario
-        dialogPanel = new DialogPanel(dialogos);
+        dialogPanel = new DialogPanel(dialogos,this);
         escenarioActual.addPanel(dialogPanel, BorderLayout.SOUTH);
     }
      

@@ -74,4 +74,10 @@ public class Escenario extends JPanel {
         revalidate();
         repaint();
     }
+    
+    public void removePanel(JPanel panel) {
+        remove(panel);
+        revalidate();
+        repaint();
+    }
 }
