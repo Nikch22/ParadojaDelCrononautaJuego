@@ -9,6 +9,7 @@ import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
 
 public class DialogPanel extends JPanel {
+
     private JLabel characterImageLabel;
     private JTextPane dialogTextPane;
     private JLabel clickIconLabel;
@@ -17,31 +18,31 @@ public class DialogPanel extends JPanel {
     private Image backgroundImage;
     private Juego referenciaJuego;
     private String nuevoEscenarioPath;
-    
-   public DialogPanel(String[] dialogos, Juego referenciaJuego) {
-       this.referenciaJuego = referenciaJuego;
-       this.dialogos = dialogos;
+
+    public DialogPanel(String[] dialogos, Juego referenciaJuego) {
+        this.referenciaJuego = referenciaJuego;
+        this.dialogos = dialogos;
         // Asignno Background del panel de dialogos
         String backgroundImagePath = "/recursos/assets/imagenes/dialogos_1.png";
         backgroundImage = new ImageIcon(getClass().getResource(backgroundImagePath)).getImage();
 
         String characterImagePath = "/recursos/assets/imagenes/personajes/anciano.png";
         String initialDialogText = dialogos[0];
-        String clickIconPath = "/recursos/assets/imagenes/iconos/click_claro.png";       
+        String clickIconPath = "/recursos/assets/imagenes/iconos/click_claro.png";
 
         // Cambiando el layout del panel
         setLayout(new BorderLayout());
         setBackground(Color.BLACK);
-        
-        setPreferredSize(new Dimension(Integer.MAX_VALUE,170));
+
+        setPreferredSize(new Dimension(Integer.MAX_VALUE, 170));
 
         // Crear y configurar la imagen del personaje
         ImageIcon characterImageIcon = new ImageIcon(getClass().getResource(characterImagePath));
         // Redimensionar la imagen
-        Image characterImage = characterImageIcon.getImage().getScaledInstance(90, 90 ,Image.SCALE_DEFAULT);
+        Image characterImage = characterImageIcon.getImage().getScaledInstance(90, 90, Image.SCALE_DEFAULT);
         characterImageIcon = new ImageIcon(characterImage);
         characterImageLabel = new JLabel(characterImageIcon);
-        
+
         // Create a panel for the characterImageLabel and place it to the WEST
         JPanel characterImagePanel = new JPanel();
         characterImagePanel.setLayout(new BorderLayout());
@@ -54,8 +55,8 @@ public class DialogPanel extends JPanel {
 
         // Configuración de la caja de texto
         dialogTextPane.setEditable(false);
-        dialogTextPane.setFont(new Font("Oswald", Font.BOLD, 32)); 
-        dialogTextPane.setForeground(Color.LIGHT_GRAY); 
+        dialogTextPane.setFont(new Font("Oswald", Font.BOLD, 32));
+        dialogTextPane.setForeground(Color.LIGHT_GRAY);
         dialogTextPane.setOpaque(false);
         dialogTextPane.setMinimumSize(new Dimension(500, 60));
         dialogTextPane.setMaximumSize(new Dimension(Integer.MAX_VALUE, 60)); // Añadido para permitir la expansión horizontal
@@ -108,7 +109,7 @@ public class DialogPanel extends JPanel {
             }
         });
     }
-   
+
     // Sobrescribimos paintComponent para dibujar la imagen de fondo
     @Override
     protected void paintComponent(Graphics g) {
@@ -127,9 +128,9 @@ public class DialogPanel extends JPanel {
     }
 
     public void setNuevoEscenario(String pathNuevoEscenario) {
-       Escenario escenarioActual = referenciaJuego.getEscenarioActual();
-       escenarioActual.removePanel(DialogPanel.this);
-       escenarioActual.setImageBackground(pathNuevoEscenario);
-       escenarioActual.addPanel(DialogPanel.this, BorderLayout.SOUTH);
+        Escenario escenarioActual = referenciaJuego.getEscenarioActual();
+        escenarioActual.removePanel(DialogPanel.this);
+        escenarioActual.setImageBackground(pathNuevoEscenario);
+        escenarioActual.addPanel(DialogPanel.this, BorderLayout.SOUTH);
     }
 }

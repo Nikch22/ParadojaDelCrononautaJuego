@@ -10,6 +10,7 @@ import javax.imageio.ImageIO;
  * @author huals
  */
 public class ImagePanel extends JPanel {
+
     private Image image;
 
     public ImagePanel(String imagePath) {
