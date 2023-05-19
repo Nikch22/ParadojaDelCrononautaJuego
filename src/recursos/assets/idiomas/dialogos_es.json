@@ -1,4 +1,4 @@
-{
+ {
    "dialogos": {
       "pantalla1": [
          {
@@ -12,6 +12,10 @@
          {
             "personaje": "Aldric",
             "frase": "Todo lo que necesito es ajustar las coordenadas... Establecer las fechas y... ¡listo!"
+         },
+         {
+           "personaje": "Minijuego",
+           "frase": ""          
          },
          {
             "personaje": "Guion",
@@ -104,6 +108,10 @@
             "frase": "~ Aldric y Darius se adentran en el templo y trabajan juntos para superar obstáculos y trampas del templo. ~"
          },
          {
+           "personaje": "Minijuego",
+           "frase": ""          
+         },
+         {
             "personaje": "Guion",
             "frase": "~ Hasta finalmente encontrar la pieza. ~"
          }
@@ -178,6 +186,10 @@
             "frase": "~ Después de superar los obstáculos y trampas, Aldric y el anciano encuentran la inscripción en una cámara secreta de la torre. ~"
          },
          {
+           "personaje": "Minijuego",
+           "frase": ""          
+         },
+         {
             "personaje": "Guion",
             "frase": "~ Aldric descifra el mensaje oculto, revelando la información que necesita para reparar su máquina del tiempo. ~"
          },
@@ -196,7 +208,7 @@
             "frase": "¿Dónde estoy ahora? No parece ni la antigua Grecia ni la época medieval..."
          },
          {
-            "personaje": "Transeúnte",
+            "personaje": "Transeunte",
             "frase": "¡Estamos en plena Revolución Francesa, amigo! ¡Cuidado con los espías y los enemigos de la revolución!"
          },
          {
@@ -228,6 +240,10 @@
             "frase": "~ Aldric llega al palacio real de Versalles y comienza a explorar sus laberínticos pasillos, siguiendo las pistas proporcionadas por Jean. ~"
          },
          {
+           "personaje": "Minijuego",
+           "frase": ""          
+         },
+         {
             "personaje": "Guion",
             "frase": "~ Durante su búsqueda, descubre habitaciones ocultas y corredores secretos que revelan aspectos desconocidos de la vida en la corte. ~"
          },
@@ -246,6 +262,10 @@
          {
             "personaje": "Aldric",
             "frase": "Este mecanismo parece difícil, pero sé que puedo con esto."
+         },
+         {
+           "personaje": "Minijuego",
+           "frase": ""          
          },
          {
             "personaje": "Guion",
@@ -306,6 +326,10 @@
             "frase": "Este es el último obstáculo que me separa de la pieza que necesito. Debo resolverlo para completar mi misión."
          },
          {
+           "personaje": "Minijuego",
+           "frase": ""          
+         },
+         {
             "personaje": "Guion",
             "frase": "~ Después de desbloquear el dispositivo, Aldric obtiene la última pieza para su máquina del tiempo y escapa de la base militar sin ser detectado. ~"
          },
@@ -322,6 +346,10 @@
          {
             "personaje": "Guion",
             "frase": "~ Con gran anticipación, y deseo de cumplir su objetivo inicial, decide probarla una vez más, pero ahora viajará hacia el futuro. Configura la máquina para llevarlo varios siglos adelante y se lanza a la aventura. ~"
+         },
+         {
+           "personaje": "Minijuego",
+           "frase": ""          
          },
          {
             "personaje": "Aldric",

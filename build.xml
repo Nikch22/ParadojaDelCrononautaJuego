@@ -31,6 +31,13 @@
       -post-clean:               called after cleaning build products
 
     (Targets beginning with '-' are not intended to be called on their own.)
+    <target name="-init-macrodef-javac">
+        <classpath>
+            <fileset dir="lib">
+                <include name="*.jar"/>
+            </fileset>
+        </classpath>
+    </target>
 
     Example of inserting an obfuscator after compilation could look like this:
 

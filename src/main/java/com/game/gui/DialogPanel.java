@@ -3,41 +3,48 @@ package main.java.com.game.gui;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.Map;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
+import org.json.simple.JSONObject;
 
 public class DialogPanel extends JPanel {
+
     private JLabel characterImageLabel;
     private JTextPane dialogTextPane;
     private JLabel clickIconLabel;
-    private String[] dialogos;
+    private Map<String, ArrayList<JSONObject>> dialogos;
     private int dialogoActual = 0;
+    private int pantallaActualIndex = 1;
+    private String pantallaActual = "pantalla" + pantallaActualIndex;
     private Image backgroundImage;
 
-   public DialogPanel(String[] dialogos) {
-       this.dialogos = dialogos;
+    public DialogPanel(Map<String, ArrayList<JSONObject>> dialogosPorPantalla) {
+        this.dialogos = dialogosPorPantalla;
         // Asegúrate de cambiar la ruta a tu imagen de fondo real
         String backgroundImagePath = "/recursos/assets/imagenes/dialogos_1.png";
         backgroundImage = new ImageIcon(getClass().getResource(backgroundImagePath)).getImage();
 
-        String characterImagePath = "/recursos/assets/imagenes/personajes/anciano.png";
-        String initialDialogText = dialogos[0];
-        String clickIconPath = "/recursos/assets/imagenes/iconos/click_claro.png";       
+        String initialcharacter = (String) dialogos.get(pantallaActual).get(0).get("personaje");
+        String characterImagePath = "/recursos/assets/imagenes/personajes/" + initialcharacter + ".png";
+        String initialDialogText = (String) initialcharacter + ": " + dialogos.get("pantalla1").get(0).get("frase");
+        String clickIconPath = "/recursos/assets/imagenes/iconos/click_claro.png";
 
         // Cambiando el layout del panel
         setLayout(new BorderLayout());
         setBackground(Color.BLACK);
-        
-        setPreferredSize(new Dimension(Integer.MAX_VALUE,170));
+
+        setPreferredSize(new Dimension(Integer.MAX_VALUE, 170));
 
         // Crear y configurar la imagen del personaje
         ImageIcon characterImageIcon = new ImageIcon(getClass().getResource(characterImagePath));
         // Redimensionar la imagen
-        Image characterImage = characterImageIcon.getImage().getScaledInstance(90, 90 ,Image.SCALE_DEFAULT);
+        Image characterImage = characterImageIcon.getImage().getScaledInstance(90, 90, Image.SCALE_DEFAULT);
         characterImageIcon = new ImageIcon(characterImage);
         characterImageLabel = new JLabel(characterImageIcon);
-        
+
         // Create a panel for the characterImageLabel and place it to the WEST
         JPanel characterImagePanel = new JPanel();
         characterImagePanel.setLayout(new BorderLayout());
@@ -50,8 +57,8 @@ public class DialogPanel extends JPanel {
 
         // Configuración de la caja de texto
         dialogTextPane.setEditable(false);
-        dialogTextPane.setFont(new Font("Oswald", Font.BOLD, 32)); 
-        dialogTextPane.setForeground(Color.LIGHT_GRAY); 
+        dialogTextPane.setFont(new Font("Oswald", Font.BOLD, 32));
+        dialogTextPane.setForeground(Color.LIGHT_GRAY);
         dialogTextPane.setOpaque(false);
         dialogTextPane.setMinimumSize(new Dimension(500, 60));
         dialogTextPane.setMaximumSize(new Dimension(Integer.MAX_VALUE, 60)); // Añadido para permitir la expansión horizontal
@@ -92,15 +99,47 @@ public class DialogPanel extends JPanel {
         // Agregar un MouseListener al panel para detectar clics
         addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-                // Aquí puedes agregar la lógica para cambiar el diálogo cuando el panel es clickeado
-                dialogoActual++;
-                if (dialogoActual < dialogos.length) {
-                    setDialogText(dialogos[dialogoActual]);
+                // Aquí agregar la lógica para cambiar el diálogo cuando el panel es clickeado
+                if (dialogoActual != -1) {
+                    dialogoActual++;
+                } else {
+                    dialogoActual = 0;
+                }
+                if (pantallaActualIndex == 1 || pantallaActualIndex == 2 || pantallaActualIndex == 3 || pantallaActualIndex == 4 || pantallaActualIndex == 5 || pantallaActualIndex == 6) {
+                    if (dialogoActual < dialogosPorPantalla.get(pantallaActual).size()) {
+                        JSONObject dialogo = dialogos.get(pantallaActual).get(dialogoActual);
+                        if (!dialogo.get("personaje").equals("Minijuego")) {
+                            System.out.println(pantallaActual);
+
+                            String personaje = (String) dialogo.get("personaje");
+                            String frase;
+                            if (!personaje.equals("Guion") && !personaje.equals("Narrador")) {
+                                frase = (String) personaje + ": " + dialogo.get("frase");
+                            } else {
+                                frase = (String) dialogo.get("frase");
+                            }
+
+                            setDialogCharacterImage(personaje);
+                            setDialogText(frase);
+                        } else {
+                            //Lógica del Minijuego
+                            System.out.println("Se llama a Minijuego");
+                        }
+
+                    } else {
+                        if (pantallaActualIndex != 6) {
+                            dialogoActual = -1;
+                            pantallaActualIndex++;
+                            pantallaActual = "pantalla" + pantallaActualIndex;
+                        }else{
+                            System.out.println("Historia Terminada!");
+                        }
+                    }
                 }
             }
         });
     }
-   
+
     // Sobrescribimos paintComponent para dibujar la imagen de fondo
     @Override
     protected void paintComponent(Graphics g) {
@@ -108,6 +147,16 @@ public class DialogPanel extends JPanel {
         if (backgroundImage != null) {
             g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
         }
+    }
+
+    public void setDialogCharacterImage(String personaje) {
+        String characterImagePath = "/recursos/assets/imagenes/personajes/" + personaje + ".png";
+        // Crear y configurar la imagen del personaje
+        ImageIcon characterImageIcon = new ImageIcon(getClass().getResource(characterImagePath));
+        // Redimensionar la imagen
+        Image characterImage = characterImageIcon.getImage().getScaledInstance(90, 90, Image.SCALE_DEFAULT);
+        characterImageIcon = new ImageIcon(characterImage);
+        characterImageLabel.setIcon(characterImageIcon);
     }
 
     public void setDialogText(String dialogText) {
