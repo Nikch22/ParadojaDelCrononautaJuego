@@ -176,9 +176,9 @@ public class DialogPanel extends JPanel {
     }
 
     public void setNuevoEscenario(String pathNuevoEscenario) {
-       Escenario escenarioActual = referenciaJuego.getEscenarioActual();
-       escenarioActual.removePanel(DialogPanel.this);
-       escenarioActual.setImageBackground(pathNuevoEscenario);
-       escenarioActual.addPanel(DialogPanel.this, BorderLayout.SOUTH);
+        Escenario escenarioActual = referenciaJuego.getEscenarioActual();
+        escenarioActual.removePanel(DialogPanel.this);
+        escenarioActual.setImageBackground(pathNuevoEscenario);
+        escenarioActual.addPanel(DialogPanel.this, BorderLayout.SOUTH);
     }
 }

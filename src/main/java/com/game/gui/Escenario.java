@@ -1,6 +1,4 @@
-
 package main.java.com.game.gui;
-
 
 import main.java.com.game.utils.*;
 
@@ -14,6 +12,7 @@ import javax.sound.sampled.*;
  * @author huals
  */
 public class Escenario extends JPanel {
+
     private ImagePanel imagePanel;
     private Clip audioClip;
 
@@ -28,7 +27,7 @@ public class Escenario extends JPanel {
     public void setImageBackground(String imagePath) {
         // Crear un nuevo ImagePanel con la nueva imagen
         imagePanel = new ImagePanel(imagePath);
-        
+
         // Obtener el tamaño de la pantalla, excluyendo la barra de tareas
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         Rectangle bounds = ge.getMaximumWindowBounds();
@@ -58,7 +57,7 @@ public class Escenario extends JPanel {
             audioClip.start();
             // Para que el audio se repita continuamente
             //audioClip.loop(Clip.LOOP_CONTINUOUSLY);
-            
+
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
             e.printStackTrace();
         }
@@ -67,14 +66,13 @@ public class Escenario extends JPanel {
     public void addPanel(JPanel panel, String position) {
         // Si la posición es "NORTH" o "SOUTH", asignamos el panel a esa posición
         add(panel, position);
-        System.out.println("Escenario: "+position);
-
+        System.out.println("Escenario: " + position);
 
         // Asegurarse de que los cambios se apliquen
         revalidate();
         repaint();
     }
-    
+
     public void removePanel(JPanel panel) {
         remove(panel);
         revalidate();

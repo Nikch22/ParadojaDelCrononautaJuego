@@ -14,9 +14,9 @@ import java.awt.event.MouseEvent;
  * @author huals
  */
 public class TranslucentButton extends JButton {
+
     private Color background;
     private Color hoverBackground;
-    
 
     public TranslucentButton(String text, Color background, Color hoverBackground, Font font, Dimension dimension, Dimension maxDimension) {
         super(text);
@@ -26,8 +26,8 @@ public class TranslucentButton extends JButton {
         setFont(font);
         setPreferredSize(dimension);
         setMaximumSize(maxDimension);
-        
-        addMouseListener(new MouseAdapter() { 
+
+        addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
                 setBackground(hoverBackground);
@@ -39,7 +39,7 @@ public class TranslucentButton extends JButton {
             }
         });
     }
-    
+
     public TranslucentButton(String text, Color background, Color hoverBackground, Font font, Dimension dimension) {
         super(text);
         this.background = background;
@@ -48,8 +48,8 @@ public class TranslucentButton extends JButton {
         setFont(font);
         setPreferredSize(dimension);
         setMaximumSize(dimension);
-        
-        addMouseListener(new MouseAdapter() { 
+
+        addMouseListener(new MouseAdapter() {
             @Override
             public void mouseEntered(MouseEvent e) {
                 setBackground(hoverBackground);
@@ -65,7 +65,7 @@ public class TranslucentButton extends JButton {
     @Override
     protected void paintComponent(Graphics g) {
         setBackground(getModel().isRollover() ? hoverBackground : background);
-        
+
         Graphics2D g2 = (Graphics2D) g.create();
         g2.setComposite(AlphaComposite.SrcOver.derive(1f)); // Establecer opacidad para el fondo 0.95, ETC
         g2.setColor(getBackground());
