@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Map;
+import javax.swing.border.EmptyBorder;
 import javax.swing.event.MouseInputAdapter;
 import javax.swing.text.Caret;
 import javax.swing.text.Highlighter;
@@ -31,6 +32,9 @@ public class DialogPanel extends JPanel {
     public DialogPanel(Map<String, ArrayList<JSONObject>> dialogosPorPantalla, Juego referenciaJuego) {
         this.referenciaJuego = referenciaJuego;
         this.dialogos = dialogosPorPantalla;
+        
+                // Añade esta línea
+        this.setBorder(new EmptyBorder(0, 0, 0, 0));
         // Asignno Background del panel de dialogos
 //        String backgroundImagePath = "/recursos/assets/imagenes/dialogos_1.png";
 //        backgroundImage = new ImageIcon(getClass().getResource(backgroundImagePath)).getImage();
