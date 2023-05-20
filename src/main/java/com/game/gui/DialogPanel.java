@@ -7,6 +7,8 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Map;
 import javax.swing.event.MouseInputAdapter;
+import javax.swing.text.Caret;
+import javax.swing.text.Highlighter;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
@@ -30,8 +32,8 @@ public class DialogPanel extends JPanel {
         this.referenciaJuego = referenciaJuego;
         this.dialogos = dialogosPorPantalla;
         // Asignno Background del panel de dialogos
-        String backgroundImagePath = "/recursos/assets/imagenes/dialogos_1.png";
-        backgroundImage = new ImageIcon(getClass().getResource(backgroundImagePath)).getImage();
+//        String backgroundImagePath = "/recursos/assets/imagenes/dialogos_1.png";
+//        backgroundImage = new ImageIcon(getClass().getResource(backgroundImagePath)).getImage();
 
         String initialcharacter = (String) dialogos.get(pantallaActual).get(0).get("personaje");
         String characterImagePath = "/recursos/assets/imagenes/personajes/" + initialcharacter + ".png";
@@ -40,9 +42,9 @@ public class DialogPanel extends JPanel {
 
         // Cambiando el layout del panel
         setLayout(new BorderLayout());
-        setBackground(Color.BLACK);
+        setBackground(new Color(185, 185, 185, 100));
 
-        setPreferredSize(new Dimension(Integer.MAX_VALUE, 170));
+        setPreferredSize(new Dimension(Integer.MAX_VALUE, 150));
 
         // Crear y configurar la imagen del personaje
         ImageIcon characterImageIcon = new ImageIcon(getClass().getResource(characterImagePath));
@@ -58,16 +60,26 @@ public class DialogPanel extends JPanel {
         characterImagePanel.setOpaque(false);
 
         // Crear y configurar el área de texto de diálogo
-        dialogTextPane = new JTextPane();
+        dialogTextPane = new JTextPane() {
+            public void setHighlighter(Highlighter h) {
+                /* Sobrescribir para ignorar */ }
+
+        };
         dialogTextPane.setText(initialDialogText);
 
         // Configuración de la caja de texto
         dialogTextPane.setEditable(false);
-        dialogTextPane.setFont(new Font("Oswald", Font.BOLD, 32));
-        dialogTextPane.setForeground(Color.LIGHT_GRAY);
+        dialogTextPane.setFont(new Font("Oswald", Font.BOLD, 28));
+        dialogTextPane.setForeground(new Color(252, 252, 252));
         dialogTextPane.setOpaque(false);
         dialogTextPane.setMinimumSize(new Dimension(500, 60));
         dialogTextPane.setMaximumSize(new Dimension(Integer.MAX_VALUE, 60)); // Añadido para permitir la expansión horizontal
+
+        // Hacer que el texto no sea seleccionable
+        Caret caret = dialogTextPane.getCaret();
+        caret.setBlinkRate(0);
+        caret.setVisible(false);
+
         // Para el centrado vertical
         StyledDocument doc = dialogTextPane.getStyledDocument();
         SimpleAttributeSet center = new SimpleAttributeSet();
@@ -95,14 +107,34 @@ public class DialogPanel extends JPanel {
         JPanel northPanel = new JPanel(new BorderLayout());
         northPanel.add(characterImagePanel, BorderLayout.WEST);
         northPanel.add(dialogTextPanel, BorderLayout.CENTER);
-        northPanel.setOpaque(false);// set the background color
+        northPanel.setBackground(new Color(0, 0, 0, 0));
+        northPanel.setOpaque(false);
         add(northPanel, BorderLayout.NORTH);
 
         // Crear un panel para clickIconLabel y agregarlo al sur
         JPanel southPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
         southPanel.add(clickIconLabel);
+        southPanel.setBackground(new Color(0, 0, 0, 0));
         southPanel.setOpaque(false);
         add(southPanel, BorderLayout.SOUTH);
+
+        // Agregar filtro de eventos de mouse para ignorar eventos de arrastre
+        Toolkit.getDefaultToolkit().addAWTEventListener(new AWTEventListener() {
+            public void eventDispatched(AWTEvent event) {
+                if (event instanceof MouseEvent) {
+                    MouseEvent mouseEvent = (MouseEvent) event;
+                    if (mouseEvent.getSource() == dialogTextPane) {
+                        switch (mouseEvent.getID()) {
+                            case MouseEvent.MOUSE_DRAGGED:
+                            case MouseEvent.MOUSE_PRESSED:
+                            case MouseEvent.MOUSE_RELEASED:
+                                mouseEvent.consume();
+                                break;
+                        }
+                    }
+                }
+            }
+        }, AWTEvent.MOUSE_EVENT_MASK | AWTEvent.MOUSE_MOTION_EVENT_MASK);
 
         // Agregar un MouseListener al panel para detectar clics
         addMouseListener(new MouseAdapter() {
@@ -119,15 +151,14 @@ public class DialogPanel extends JPanel {
         });
     }
 
-    // Sobrescribimos paintComponent para dibujar la imagen de fondo
-    @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-        if (backgroundImage != null) {
-            g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
-        }
-    }
-
+//    // Sobrescribimos paintComponent para dibujar la imagen de fondo
+//    @Override
+//    protected void paintComponent(Graphics g) {
+//        super.paintComponent(g);
+//        if (backgroundImage != null) {
+//            g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+//        }
+//    }
     public void eventMouseClicked() {
         // Aquí agregar la lógica para cambiar el diálogo cuando el panel es clickeado
         if (dialogoActual != -1) {

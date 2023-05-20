@@ -31,7 +31,7 @@ public class Escenario extends JPanel {
         // Obtener el tamaño de la pantalla, excluyendo la barra de tareas
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         Rectangle bounds = ge.getMaximumWindowBounds();
-        System.out.println(bounds.getSize());
+        //System.out.println(bounds.getSize());
         imagePanel.setPreferredSize(bounds.getSize());
 
         // Limpiar cualquier cosa que se esté mostrando en el panel y agregar el nuevo ImagePanel
@@ -65,8 +65,7 @@ public class Escenario extends JPanel {
 
     public void addPanel(JPanel panel, String position) {
         // Si la posición es "NORTH" o "SOUTH", asignamos el panel a esa posición
-        add(panel, position);
-        System.out.println("Escenario: " + position);
+        imagePanel.add(panel, position);
 
         // Asegurarse de que los cambios se apliquen
         revalidate();
