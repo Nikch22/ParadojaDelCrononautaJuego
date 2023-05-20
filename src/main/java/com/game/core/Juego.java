@@ -24,10 +24,11 @@ public class Juego {
     private Minijuego minijuegoActual;
     private DialogPanel dialogPanel;
     private Escenario escenarioActual;
+    private String idioma = "Es";
 
     public Juego() {
         // Aquí se inicializa el primer diálogo de la historia
-        escenarioActual = new Escenario("/recursos/assets/imagenes/iconos/bg2_test.jpg");
+        escenarioActual = new Escenario("/recursos/assets/imagenes/backgrounds/p1_bg_1.jpg");
         // Inicializar la historia y los minijuegos
         //iniciarHistoria();
     }
@@ -36,7 +37,7 @@ public class Juego {
         // Llamas al método cargarDialogos y guardas el resultado en una variable
         Map<String, ArrayList<JSONObject>> dialogosPorPantalla = cargarDialogos();
         // Crear un nuevo DialogPanel y agregarlo al escenario
-        dialogPanel = new DialogPanel(dialogosPorPantalla,this);
+        dialogPanel = new DialogPanel(dialogosPorPantalla, this);
         escenarioActual.addPanel(dialogPanel, BorderLayout.SOUTH);
     }
 
@@ -45,10 +46,24 @@ public class Juego {
 
         try {
             // Carga el archivo JSON
-            InputStream inputStream = getClass().getResourceAsStream("/recursos/assets/idiomas/dialogos_es.json");
+            String archivoDialogos;
+            if (idioma.equals("Es")) {
+                archivoDialogos = "/recursos/assets/idiomas/dialogos_es.json";
+            } else if (idioma.equals("En")) {
+                archivoDialogos = "/recursos/assets/idiomas/dialogos_en.json";
+            } else {
+                // Si el idioma no está especificado correctamente, puedes lanzar una excepción o establecer un valor predeterminado.
+                throw new IllegalArgumentException("Idioma no válido: " + idioma);
+            }
+
+            InputStream inputStream = getClass().getResourceAsStream(archivoDialogos);
             InputStreamReader reader = new InputStreamReader(inputStream);
             JSONParser parser = new JSONParser();
             JSONObject jsonObject = (JSONObject) parser.parse(reader);
+            /*InputStream inputStream = getClass().getResourceAsStream("/recursos/assets/idiomas/dialogos_es.json");
+            InputStreamReader reader = new InputStreamReader(inputStream);
+            JSONParser parser = new JSONParser();
+            JSONObject jsonObject = (JSONObject) parser.parse(reader);*/
 
             // Obtiene el objeto "dialogos" del JSON
             JSONObject dialogosObject = (JSONObject) jsonObject.get("dialogos");

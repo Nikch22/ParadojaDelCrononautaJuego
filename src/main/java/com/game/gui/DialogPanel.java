@@ -145,7 +145,7 @@ public class DialogPanel extends JPanel {
                     String backgroundName = (String) dialogo.get("background");
                     nuevoEscenarioPath = "/recursos/assets/imagenes/backgrounds/" + backgroundName + ".jpg";
                     String frase;
-                    if (!personaje.equals("Guion") && !personaje.equals("Narrador")) {
+                    if (!personaje.equals("Guion") && !personaje.equals("Narrador") && !personaje.equals("Script") && !personaje.equals("Narrator")) {
                         frase = (String) personaje + ": " + dialogo.get("frase");
                     } else {
                         frase = (String) dialogo.get("frase");
