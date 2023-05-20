@@ -131,6 +131,12 @@ public class DialogPanel extends JPanel {
                             setDialogText(frase);
                         } else {
                             //Lógica del Minijuego
+                            /*
+                            Minijuego2 m2 = new Minijuego2();
+                            while (m2.getn()!=3){
+                                m2.inicio();
+                            }
+                            */
                             System.out.println("Se llama a Minijuego");
                         }
 
