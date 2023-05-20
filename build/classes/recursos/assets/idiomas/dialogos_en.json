@@ -5,67 +5,78 @@
                 "personaje": "Aldric",
                 "frase": "After so many years of research and experimentation, I have finally done it... Time travel will no longer be just a dream.",
                 "background": "p1_bg_1", 
-                "instrumental": "p1_laboratorio"
+                "instrumental": "p1_laboratorio", 
+                "narracion": "p1_1_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Aldric connects some cables to the machine and takes a deep breath before turning it on. ~",
                 "background": "p1_bg_2", 
-                "instrumental": "p1_laboratorio"
+                "instrumental": "p1_laboratorio", 
+                "narracion": ""    
             },
             {
                 "personaje": "Aldric",
                 "frase": "All I need to do is adjust the coordinates... Set the dates and... there!",
                 "background": "p1_bg_2", 
-                "instrumental": "p1_laboratorio"
+                "instrumental": "p1_laboratorio", 
+                "narracion": "p1_2_aldric"
             },
             {
                 "personaje": "Minijuego",
                 "frase": "",
                 "background": "", 
-                "instrumental": ""          
+                "instrumental": "", 
+                "narracion": ""          
             },
             {
                 "personaje": "Script",
                 "frase": "~ The machine starts to hum and glow with increasing intensity. Aldric approaches the screen and watches closely. ~",
                 "background": "p1_bg_1", 
-                "instrumental": "p1_laboratorio"
+                "instrumental": "p1_laboratorio", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Yes! I'm doing it! I'm time traveling!",
                 "background": "p1_bg_3", 
-                "instrumental": "p1_laboratorio"
+                "instrumental": "p1_laboratorio", 
+                "narracion": "p1_3_aldric"
             },
             {
                 "personaje": "Aldric",
                 "frase": "What's happening? No, no, no! This shouldn't be happening!",
                 "background": "p1_bg_3", 
-                "instrumental": "p1_laboratorio"
+                "instrumental": "p1_laboratorio", 
+                "narracion": "p1_4_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "~ The laboratory fills with smoke, and the time machine becomes unstable. Aldric tries to turn it off, but it's too late. ~",
                 "background": "p1_bg_4", 
-                "instrumental": "p1_laboratorio"
+                "instrumental": "p1_laboratorio", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "No! I have to stop this!",
                 "background": "p1_bg_4", 
-                "instrumental": "p1_laboratorio"
+                "instrumental": "p1_laboratorio", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "~ There is a big explosion, and a blinding flash of light blinds Aldric. ~",
                 "background": "p1_bg_4", 
-                "instrumental": "p1_laboratorio"
+                "instrumental": "p1_laboratorio", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "~ When the light fades, Aldric is no longer in his laboratory. He finds himself in an unknown and apparently dangerous place. ~",
                 "background": "p1_bg_4", 
-                "instrumental": "p1_laboratorio"
+                "instrumental": "p1_laboratorio", 
+                "narracion": ""
             }
         ],
         "pantalla2": [
@@ -73,103 +84,120 @@
                 "personaje": "Script",
                 "frase": "~ Aldric wakes up in an unknown place. ~",
                 "background": "p2_bg_1", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "~ Disoriented and scared, Aldric begins to explore the area. ~",
                 "background": "p2_bg_1", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Where am I? What has happened to me?",
                 "background": "p2_bg_2", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": "p2_1_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Suddenly, a group of bandits emerges from the fog, armed and threatening. Aldric prepares to confront them, but an unknown warrior appears and skillfully faces them, saving Aldric. ~",
                 "background": "p2_bg_3", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": ""
             },
             {
                 "personaje": "Darius",
                 "frase": "Those bandits won't bother you again. Who are you, and how did you come to this place?",
                 "background": "p2_bg_3", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": "p2_2_darius"
             },
             {
                 "personaje": "Aldric",
                 "frase": "Thank you for saving me. My name is Aldric. I'm a scientist, and... I think I've accidentally time-traveled. I don't know where I am.",
                 "background": "p2_bg_4", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": "p2_3_aldric"
             },
             {
                 "personaje": "Darius",
                 "frase": "I'm Darius. Although I don't fully understand your situation, I will help you find answers. But first, you must learn to survive in this unknown world.",
                 "background": "p2_bg_4", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": "p2_4_darius"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Aldric and Darius travel together to a hidden camp in the mountains. Darius teaches Aldric survival skills, such as starting fires, finding food, and defending himself from potential threats. ~ ",
                 "background": "p2_bg_5", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "I never imagined I would be learning how to survive in ancient Greece.",
                 "background": "p2_bg_6", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": "p2_5_aldric"
             },
             {
                 "personaje": "Darius",
                 "frase": "And I never thought I'd be teaching a man from another time.",
                 "background": "p2_bg_6", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": "p2_6_darius"
             },
             {
                 "personaje": "Script",
                 "frase": "~ In the camp, Darius shares with Aldric stories about ancient Greece and its mysteries. ~",
                 "background": "p2_bg_7", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
-                "frase": "As they talk, Aldric suspects that the piece he needs for his time machine may be hidden in an ancient temple protected by challenges and traps.",
+                "frase": "~ As they talk, Aldric suspects that the piece he needs for his time machine may be hidden in an ancient temple protected by challenges and traps. ~",
                 "background": "p2_bg_7", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "I think that temple might hold the piece I need. Will you accompany me, Darius?",
                 "background": "p2_bg_8", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": "p2_7_aldric"
             },
             {
                 "personaje": "Darius",
                 "frase": "Of course, Aldric. Together we will face the challenges and I will help you find what you are looking for.",
                 "background": "p2_bg_8", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": "p2_8_darius"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Aldric and Darius venture into the temple and work together to overcome obstacles and traps within the temple. ~",
                 "background": "p2_bg_9", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": ""
             },
             {
                 "personaje": "Minijuego",
                 "frase": "",
                 "background": "", 
-                "instrumental": ""          
+                "instrumental": "", 
+                "narracion": ""          
             },
             {
                 "personaje": "Script",
                 "frase": "~ Until they finally find the piece. ~",
                 "background": "p2_bg_9", 
-                "instrumental": "p2_grecia"
+                "instrumental": "p2_grecia", 
+                "narracion": ""
             }
         ],
         "pantalla3": [
@@ -177,121 +205,141 @@
                 "personaje": "Script",
                 "frase": "~ Aldric is transported to the medieval era and finds himself in a bustling market full of merchants, musicians, and peasants. ~",
                 "background": "p3_bg_1", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "~ Aldric explores the market with curiosity. ~",
                 "background": "p3_bg_1", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Where am I now? Everything seems so different...",
                 "background": "p3_bg_1", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": "p3_1_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Suddenly, guards approach Aldric, intrigued by his strange appearance and behavior. ~",
                 "background": "p3_bg_2", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": ""
             },
             {
                 "personaje": "Guard",
                 "frase": "Hello there, stranger! We haven't seen you around here before. Who are you and what are you doing here?",
                 "background": "p3_bg_2", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": "p3_2_guardia"
             },
             {
                 "personaje": "Aldric",
                 "frase": "My name is Aldric. I am a scientist... (he pauses, hesitant to reveal his origin, at that moment he feels a sudden headache and sees the image of inScriptions) ...and I am looking for something important.",
                 "background": "p3_bg_2", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": "p3_3_aldric"
             },
             {
                 "personaje": "Guard",
                 "frase": "Maybe you should talk to our wise old man. He knows many stories and secrets of our kingdom.",
                 "background": "p3_bg_2", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": "p3_4_guardia"
             },
             {
                 "personaje": "Script",
                 "frase": "~ The guards take Aldric to the wise old man, a kind-looking man who is knowledgeable of the mysteries of the kingdom. ~",
                 "background": "p3_bg_3", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": ""
             },
             {
                 "personaje": "Old Man",
                 "frase": "What are you looking for, young traveler? I can see in your eyes that you come from afar.",
                 "background": "p3_bg_4", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": "p3_5_anciano"
             },
             {
                 "personaje": "Aldric",
                 "frase": "My name is Aldric. I am a scientist and I have traveled through time. I need to find a hidden message in an inScription that contains a clue to repairing my time machine and returning to my own era.",
                 "background": "p3_bg_4", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": "p3_6_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Intrigued by Aldric's story, the Old Man decides to help him in his quest. ~",
                 "background": "p3_bg_4", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": ""
             },
             {
                 "personaje": "Old Man",
                 "frase": "I believe I know the inscription you speak of, but it is in an abandoned tower, protected by deadly puzzles and traps. If you are willing to face those challenges, I will guide you there.",
                 "background": "p3_bg_4", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": "p3_7_anciano"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Aldric and the Old Man embark on the dangerous journey to the abandoned tower. Together, they face the challenges of the tower until they find the ancient inscriptions. ~",
                 "background": "p3_bg_5", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "It's incredible to think that this land, which seems so primitive, will one day become the modern world that I know.",
                 "background": "p3_bg_6", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": "p3_8_aldric"
             },
             {
                 "personaje": "Aldric",
                 "frase": "~ What will the world of the future be like? I need to know.~",
                 "background": "p3_bg_7", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": "p3_9_aldric"
             },
             {
                 "personaje": "Old Man",
                 "frase": "Our past always holds secrets, but it also teaches us valuable lessons.",
                 "background": "p3_bg_7", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": "p3_10_anciano"
             },
             {
                 "personaje": "Script",
                 "frase": "~ After overcoming the obstacles and traps, Aldric and the Old Man find the inscription in a secret chamber of the tower. ~",
                 "background": "p3_bg_8", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": ""
             },
             {
                 "personaje": "Minijuego",
                 "frase": "",
                 "background": "", 
-                "instrumental": ""            
+                "instrumental": "", 
+                "narracion": ""            
             },
             {
                 "personaje": "Script",
                 "frase": "~ Aldric deciphers the hidden message, revealing the information he needs to repair his time machine. ~",
                 "background": "p3_bg_8", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": ""
             },
             {
                 "personaje": "Old Man",
                 "frase": "You have shown to be a tireless seeker of truth. Good luck on your journey, Aldric!",
                 "background": "p3_bg_8", 
-                "instrumental": "p3_medieval"
+                "instrumental": "p3_medieval", 
+                "narracion": "p3_11_anciano"
             }
         ],
         "pantalla4": [
@@ -299,121 +347,141 @@
                 "personaje": "Script",
                 "frase": "~ Aldric is transported to a new era and finds himself on a cobbled street. He looks around and notices that people dress differently and hears murmurs about a revolution. ~ ",
                 "background": "p4_bg_1", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Where am I now? It doesn't look like ancient Greece or the medieval era...",
                 "background": "p4_bg_1", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": "p4_1_aldric"
             },
             {
-                "personaje": "Script",
-                "frase": "~ We're in the midst of the French Revolution, friend! Beware of spies and enemies of the revolution. ~",
+                "personaje": "Passerby",
+                "frase": "¡We're in the midst of the French Revolution, friend! Beware of spies and enemies of the revolution!",
                 "background": "p4_bg_1", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": "p4_2_transeunte"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Aldric continues to investigate and hears rumors about a box with an enigmatic mechanism that is located in the royal palace of Versailles. ~",
                 "background": "p4_bg_2", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "~ With the information obtained, Aldric decides to search for the royal palace of Versailles, where he hopes to find the box with the mechanism he needs. ~",
                 "background": "p4_bg_4", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "~ In his search, he comes across an enigmatic spy named Jean. ~",
                 "background": "p4_bg_3", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": ""
             },
             {
                 "personaje": "Jean",
                 "frase": "I can't help but notice that you seem lost and disoriented. Perhaps I can offer you some useful information.",
                 "background": "p4_bg_3", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": "p4_3_jean"
             },
             {
                 "personaje": "Aldric",
                 "frase": "I'm looking for the royal palace of Versailles. I have to find a box that contains an important mechanism for my... purpose.",
                 "background": "p4_bg_3", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": "p4_4_aldric"
             },
             {
                 "personaje": "Jean",
                 "frase": "The palace of Versailles is a place full of mysteries and secrets. I can give you some clues to access the hidden areas, but you'll have to be stealthy and careful in your search.",
                 "background": "p4_bg_4", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": "p4_5_jean"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Aldric arrives at the royal palace of Versailles and begins to explore its labyrinthine halls, following the clues provided by Jean. ~",
                 "background": "p4_bg_5", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": ""
             },
             {
                 "personaje": "Minijuego",
                 "frase": "",
                 "background": "", 
-                "instrumental": ""          
+                "instrumental": "", 
+                "narracion": ""          
             },
             {
                 "personaje": "Script",
                 "frase": "~ During his search, he discovers hidden rooms and secret corridors that reveal unknown aspects of court life. ~",
                 "background": "p4_bg_6", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "I never imagined that this palace would be so complicated and mysterious.",
                 "background": "p4_bg_7", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": "p4_6_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "~ After exploring the intricate palace, Aldric finally finds the box with the mechanism he needs. ~",
                 "background": "p4_bg_8", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "~ To open it, he must solve a challenge that requires all of his skill and ingenuity. ~",
                 "background": "p4_bg_8", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "This mechanism looks difficult, but I know I can do this.",
                 "background": "p4_bg_8", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": "p4_7_aldric"
             },
             {
                 "personaje": "Minijuego",
                 "frase": "",
                 "background": "", 
-                "instrumental": ""          
+                "instrumental": "", 
+                "narracion": ""          
             },
             {
                 "personaje": "Script",
                 "frase": "~ After a hard attempt, Aldric solves the challenge and obtains the piece he needs to repair his time machine.~",
                 "background": "p4_bg_8", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "I did it. I have the piece I need for my time machine. Now I must continue my journey and return to my time. Thank you, Jean, for your help.",
                 "background": "p4_bg_9", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": "p4_8_aldric"
             },
             {
                 "personaje": "Jean",
                 "frase": "It's been a pleasure, Aldric! As you continue your journey, don't forget that what we yearn for can take unexpected forms. Good luck on your journey and make good use of what you have learned.",
                 "background": "p4_bg_9", 
-                "instrumental": "p4_revolucion"
+                "instrumental": "p4_revolucion", 
+                "narracion": "p4_9_jean"
             }
         ],
         "pantalla5": [
@@ -421,85 +489,99 @@
                 "personaje": "Script",
                 "frase": "~ Aldric finds himself in a bombed-out city with ruins and the sound of sirens in the distance. It's clear that he's in a war zone. ~",
                 "background": "p5_bg_1", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Where am I? This devastation... those symbols... could it be World War II? I need to find that last piece for the time machine and get out of here.",
                 "background": "p5_bg_1", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": "p5_1_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "~ In his search for the piece, Aldric comes across a coded message containing information about the location of a device in a military base. ~",
                 "background": "p5_bg_2", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "This coded message could be the key to finding the device I need. But first, I must decipher it.",
                 "background": "p5_bg_2", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": "p5_2_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Aldric uses his knowledge to decode the message and discovers that the device is in a nearby military base. ~",
                 "background": "p5_bg_3", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "The military base isn't far from here. I must get there and obtain the device without being detected.",
                 "background": "p5_bg_3", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": "p5_3_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Aldric heads towards the military base, navigating dangerous territory and overcoming obstacles in this dark war. ~",
                 "background": "p5_bg_3", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "~ Upon arriving at the base, Aldric infiltrates it and sets out to find the device. He uses his knowledge of the era and military tactics he learned from his time in the army as a young man to stay unnoticed. ~",
                 "background": "p5_bg_5", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "The success of my mission depends on my ability to stay unnoticed and find that device.",
                 "background": "p5_bg_5", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": "p5_4_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Aldric finally finds the device in a secret room of the base. He must solve a complex puzzle to unlock the device and access the final piece he needs. ~",
                 "background": "p5_bg_6", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "This is the last obstacle standing between me and the piece I need. I must solve it to complete my mission.",
                 "background": "p5_bg_6", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": "p5_5_aldric"
             },
             {
                 "personaje": "Minijuego",
                 "frase": "",
                 "background": "", 
-                "instrumental": ""          
+                "instrumental": "", 
+                "narracion": ""          
             },
             {
                 "personaje": "Script",
                 "frase": "~ After unlocking the device, Aldric obtains the final piece for his time machine and escapes the military base undetected. ~",
                 "background": "p5_bg_7", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "I did it! I finally have the final piece for the time machine and can go back to my time. Despite the challenges, I succeeded. As for you... just like a seed that grows and flourishes in fertile soil, the difficulties of the past nourish a prosperous future filled with progress.",
                 "background": "p5_bg_8", 
-                "instrumental": "p5_guerra"
+                "instrumental": "p5_guerra", 
+                "narracion": "p5_6_aldric"
             }
         ],
         "pantalla6": [
@@ -507,115 +589,134 @@
                 "personaje": "Script",
                 "frase": "~ Aldric returns to his time and excitedly completes the time machine. ~ ",
                 "background": "p6_bg_1", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "~ With great anticipation and a desire to achieve his initial goal, he decides to test it once more, but this time, he'll travel to the future. He sets the machine to take him several centuries forward and sets off on the adventure. ~",
                 "background": "p6_bg_1", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Minijuego",
                 "frase": "",
                 "background": "", 
-                "instrumental": ""          
+                "instrumental": "", 
+                "narracion": ""          
             },
             {
                 "personaje": "Aldric",
                 "frase": "I finally did it! Now's the time to discover what the future holds for humanity.",
                 "background": "p6_bg_1", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": "p6_1_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Upon arriving in the future, Aldric steps out of the laboratory and finds himself in a technological, advanced, and prosperous city. ~",
                 "background": "p6_bg_2", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "It's incredible! Everything I've dreamt of and more. Humanity has truly prospered and created a wonderful world.",
                 "background": "p6_bg_2", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": "p6_2_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "~ As he explores the city, Aldric meets the inhabitants of the future, who tell him about technological advances and how they have improved their quality of life. However, they also share their concerns about the growing dependence on technology and the loss of human connection. ~",
                 "background": "p6_bg_3", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Inhabitant of the future",
                 "frase": "Despite our wonderful creations, humanity is still seeking a balance between technology and our own humanity.",
                 "background": "p6_bg_3", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": "p6_3_habitante"
             },
             {
                 "personaje": "Script",
                 "frase": "~ Aldric reflects on the words of the future inhabitant and realizes that although he has achieved his goal of traveling to the future, his true purpose is to learn from past mistakes and apply that knowledge to build a better world. ~",
                 "background": "p6_bg_4", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "I understand what I must do now. I will return to my time and share what I have learned. Together, we can build a better and more balanced future.",
                 "background": "p6_bg_4", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": "p6_4_aldric"
             },
             {
                 "personaje": "Script",
                 "frase": "...",
                 "background": "p6_bg_5", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "...",
                 "background": "p6_bg_6", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "...",
                 "background": "p6_bg_7", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "...",
                 "background": "p6_bg_8", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "...",
                 "background": "p6_bg_9", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Narrator",
                 "frase": "Although Aldric thought he had found utopia, reality was darker than it seemed. Humanity had lost its essence amid technology and progress.",
                 "background": "p6_bg_9", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "...",
                 "background": "p6_bg_5", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "...",
                 "background": "p6_bg_10", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             },
             {
                 "personaje": "Script",
                 "frase": "FIN",
                 "background": "p6_bg_5", 
-                "instrumental": "p6_futuro"
+                "instrumental": "p6_futuro", 
+                "narracion": ""
             }
         ]
     },
