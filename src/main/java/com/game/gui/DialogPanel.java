@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.Map;
+import javax.swing.event.MouseInputAdapter;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
@@ -22,11 +23,12 @@ public class DialogPanel extends JPanel {
     private String pantallaActual = "pantalla" + pantallaActualIndex;
     private Image backgroundImage;
     private Juego referenciaJuego;
+    private String backgroundEscenarioActual;
     private String nuevoEscenarioPath;
-    
-   public DialogPanel(Map<String, ArrayList<JSONObject>> dialogosPorPantalla, Juego referenciaJuego) {
-       this.referenciaJuego = referenciaJuego;
-       this.dialogos = dialogosPorPantalla;
+
+    public DialogPanel(Map<String, ArrayList<JSONObject>> dialogosPorPantalla, Juego referenciaJuego) {
+        this.referenciaJuego = referenciaJuego;
+        this.dialogos = dialogosPorPantalla;
         // Asignno Background del panel de dialogos
         String backgroundImagePath = "/recursos/assets/imagenes/dialogos_1.png";
         backgroundImage = new ImageIcon(getClass().getResource(backgroundImagePath)).getImage();
@@ -77,6 +79,8 @@ public class DialogPanel extends JPanel {
         dialogTextPanel.setLayout(new GridBagLayout()); // Cambiado a GridBagLayout
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.BOTH;
+        gbc.weightx = 1.0; // El texto se expandirá horizontalmente
+        gbc.weighty = 1.0; // El texto se expandirá verticalmente
         dialogTextPanel.add(dialogTextPane, gbc);
         dialogTextPanel.setOpaque(false);
 
@@ -103,47 +107,14 @@ public class DialogPanel extends JPanel {
         // Agregar un MouseListener al panel para detectar clics
         addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-                // Aquí agregar la lógica para cambiar el diálogo cuando el panel es clickeado
-                if (dialogoActual != -1) {
-                    dialogoActual++;
-                } else {
-                    dialogoActual = 0;
-                }
-                if (pantallaActualIndex == 1 || pantallaActualIndex == 2 || pantallaActualIndex == 3 || pantallaActualIndex == 4 || pantallaActualIndex == 5 || pantallaActualIndex == 6) {
-                    if (dialogoActual < dialogosPorPantalla.get(pantallaActual).size()) {
-                        JSONObject dialogo = dialogos.get(pantallaActual).get(dialogoActual);
-                        if (!dialogo.get("personaje").equals("Minijuego")) {
-                            System.out.println(pantallaActual);
+                eventMouseClicked();
+            }
+        });
 
-                            String personaje = (String) dialogo.get("personaje");
-                            String frase;
-                            if (!personaje.equals("Guion") && !personaje.equals("Narrador")) {
-                                frase = (String) personaje + ": " + dialogo.get("frase");
-                            } else {
-                                frase = (String) dialogo.get("frase");
-                            }
-                            
-                            if (dialogoActual == 3) {
-                            nuevoEscenarioPath = "/recursos/assets/imagenes/backgrounds/p1_bg_2.jpg";
-                            setNuevoEscenario(nuevoEscenarioPath);
-                            }
-                            setDialogCharacterImage(personaje);
-                            setDialogText(frase);
-                        } else {
-                            //Lógica del Minijuego
-                            System.out.println("Se llama a Minijuego");
-                        }
-
-                    } else {
-                        if (pantallaActualIndex != 6) {
-                            dialogoActual = -1;
-                            pantallaActualIndex++;
-                            pantallaActual = "pantalla" + pantallaActualIndex;
-                        }else{
-                            System.out.println("Historia Terminada!");
-                        }
-                    }
-                }
+        // Agregar un MouseListener específico para la caja de texto
+        dialogTextPane.addMouseListener(new MouseInputAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                eventMouseClicked();
             }
         });
     }
@@ -154,6 +125,51 @@ public class DialogPanel extends JPanel {
         super.paintComponent(g);
         if (backgroundImage != null) {
             g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
+        }
+    }
+
+    public void eventMouseClicked() {
+        // Aquí agregar la lógica para cambiar el diálogo cuando el panel es clickeado
+        if (dialogoActual != -1) {
+            dialogoActual++;
+        } else {
+            dialogoActual = 0;
+        }
+        if (pantallaActualIndex == 1 || pantallaActualIndex == 2 || pantallaActualIndex == 3 || pantallaActualIndex == 4 || pantallaActualIndex == 5 || pantallaActualIndex == 6) {
+            if (dialogoActual < dialogos.get(pantallaActual).size()) {
+                JSONObject dialogo = dialogos.get(pantallaActual).get(dialogoActual);
+                if (!dialogo.get("personaje").equals("Minijuego")) {
+                    System.out.println(pantallaActual);
+
+                    String personaje = (String) dialogo.get("personaje");
+                    String backgroundName = (String) dialogo.get("background");
+                    nuevoEscenarioPath = "/recursos/assets/imagenes/backgrounds/" + backgroundName + ".jpg";
+                    String frase;
+                    if (!personaje.equals("Guion") && !personaje.equals("Narrador")) {
+                        frase = (String) personaje + ": " + dialogo.get("frase");
+                    } else {
+                        frase = (String) dialogo.get("frase");
+                    }
+
+                    if (backgroundName != backgroundEscenarioActual) {
+                        setNuevoEscenario(nuevoEscenarioPath);
+                    }
+                    setDialogCharacterImage(personaje);
+                    setDialogText(frase);
+                } else {
+                    //Lógica del Minijuego
+                    System.out.println("Se llama a Minijuego");
+                }
+
+            } else {
+                if (pantallaActualIndex != 6) {
+                    dialogoActual = -1;
+                    pantallaActualIndex++;
+                    pantallaActual = "pantalla" + pantallaActualIndex;
+                } else {
+                    System.out.println("Historia Terminada!");
+                }
+            }
         }
     }
 
