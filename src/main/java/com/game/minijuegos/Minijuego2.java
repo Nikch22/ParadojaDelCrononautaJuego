@@ -9,7 +9,6 @@ import java.awt.event.*;
 import javax.swing.*;
 
 import main.java.com.game.utils.Mj2Listener;
-import main.java.com.game.gui.*;
 
 /**
  *
@@ -17,26 +16,23 @@ import main.java.com.game.gui.*;
  */
 public class Minijuego2 extends JPanel{
     int n;
-    //GameWindow ventanaPrincipal; 
-    JPanel labelFondo = new JPanel(new BorderLayout());
-    JPanel panelCentral = new JPanel(new GridBagLayout());
-    JPanel panelSuperior = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-    JPanel panelBotonesRelleno = new JPanel();
     
     public Minijuego2(){
         this.n = 0;
         //this.ventanaPrincipal = ventanaPrincipal; // Inicializar la ventana principal
     }
     
-    public int getn(){
-        return n;
-    }
-    
-    public JPanel getBackgroundPanel(){
-        return labelFondo;
-    }
-    
     public void inicio(){
+        
+        JFrame ventana = new JFrame("Vasijas");
+        ventana.setExtendedState(JFrame.MAXIMIZED_BOTH); // Establece el estado de la ventana como maximizado
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Cierra la aplicación al cerrar la ventana
+        ventana.setLayout(new BorderLayout()); // Utiliza un BorderLayout para organizar los componentes
+        ventana.setExtendedState(JFrame.MAXIMIZED_BOTH);    
+        ventana.setUndecorated(true);  // Esta línea oculta la barra de título y los bordes de la ventana
+        // Evita que la ventana se redimensione
+        ventana.setResizable(false);
+        
         
             int numero = (int)(Math.random()*3 + 1);
             int v1 = (int)(Math.random()*3 + 1);
@@ -54,9 +50,13 @@ public class Minijuego2 extends JPanel{
             int b5=v2+3*n;
             int b6=v3+3*n;
             
+            JLabel labelFondo = new JLabel();
+            labelFondo.setLayout(new BorderLayout());
+            
+            JPanel panelSuperior = new JPanel(new FlowLayout(FlowLayout.RIGHT));
             // Crear los botones
-            JButton menu = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\iconos\\casa_blanco.png"));
-            JButton salir = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\iconos\\salida_blanco.png"));
+            JButton menu = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\iconos\\casa_blanco_c.png"));
+            JButton salir = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\iconos\\salida_blanco_.png"));
             menu.setOpaque(false);
             menu.setContentAreaFilled(false);
             menu.setBorderPainted(false);
@@ -66,13 +66,12 @@ public class Minijuego2 extends JPanel{
             Dimension di = new Dimension(30,30);
             menu.setPreferredSize(di);
             salir.setPreferredSize(di);
-            
             // Agregar los botones al panel
             panelSuperior.add(menu);
             panelSuperior.add(salir);
             panelSuperior.setOpaque(false);
             
-            JButton botonSuperior = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\minijuegos\\play.png"));
+            JButton botonSuperior = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\iconos\\play.png"));
             botonSuperior.setAlignmentX(Component.CENTER_ALIGNMENT); // Centra el botón horizontalmente
             botonSuperior.setOpaque(false);
             botonSuperior.setContentAreaFilled(false);
@@ -82,6 +81,7 @@ public class Minijuego2 extends JPanel{
             texto.setOpaque(true);
             texto.setFont(new Font("Arial", Font.BOLD, 20)); // Cambia el tamaño y el estilo de la fuente
             
+            JPanel panelCentral = new JPanel(new GridBagLayout());
             GridBagConstraints gbc = new GridBagConstraints();
             gbc.insets = new Insets(10, 10, 10, 10);
             gbc.gridx = 0;
@@ -99,12 +99,12 @@ public class Minijuego2 extends JPanel{
             gbc.insets = new Insets(10, 10, 10, 10);
 
             //Creacion botones
-            JButton boton = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\minijuegos\\vasija_1.png"));
-            JButton boton2 = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\minijuegos\\vasija_2.png"));
-            JButton boton3 = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\minijuegos\\vasija_3.png"));
-            JButton boton4 = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\minijuegos\\sonido.png"));
-            JButton boton5 = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\minijuegos\\sonido.png"));
-            JButton boton6 = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\minijuegos\\sonido.png"));
+            JButton boton = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\sprites\\vasija_1.png"));
+            JButton boton2 = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\sprites\\vasija_2.png"));
+            JButton boton3 = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\sprites\\vasija_3.png"));
+            JButton boton4 = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\iconos\\sonido_copia.png"));
+            JButton boton5 = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\iconos\\sonido_copia.png"));
+            JButton boton6 = new JButton(new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\iconos\\sonido_copia.png"));
                     
             //Tamaño botones        
             boton.setPreferredSize(dimension);
@@ -137,14 +137,15 @@ public class Minijuego2 extends JPanel{
             //Accion de los botones
             
             //Sonidos
-            botonSuperior.addActionListener(new Mj2Listener(System.getProperty("user.dir")+"\\src\\recursos\\assets\\sonidos\\vasijas_"+b+".wav"));
-            boton4.addActionListener(new Mj2Listener(System.getProperty("user.dir")+"\\src\\recursos\\assets\\sonidos\\vasijas_"+b4+".wav"));
-            boton5.addActionListener(new Mj2Listener(System.getProperty("user.dir")+"\\src\\recursos\\assets\\sonidos\\vasijas_"+b5+".wav"));
-            boton6.addActionListener(new Mj2Listener(System.getProperty("user.dir")+"\\src\\recursos\\assets\\sonidos\\vasijas_"+b6+".wav"));
+            botonSuperior.addActionListener(new Mj2Listener(System.getProperty("user.dir")+"\\src\\recursos\\assets\\audio\\sonidos\\minijuegos\\vasijas_"+b+".wav"));
+            boton4.addActionListener(new Mj2Listener(System.getProperty("user.dir")+"\\src\\recursos\\assets\\audio\\sonidos\\minijuegos\\vasijas_"+b4+".wav"));
+            boton5.addActionListener(new Mj2Listener(System.getProperty("user.dir")+"\\src\\recursos\\assets\\audio\\sonidos\\minijuegos\\vasijas_"+b5+".wav"));
+            boton6.addActionListener(new Mj2Listener(System.getProperty("user.dir")+"\\src\\recursos\\assets\\audio\\sonidos\\minijuegos\\vasijas_"+b6+".wav"));
             
             //Seleccionamos
             final int finalV2 = v2; // Create a final variable for v3
             final int finalV3 = v3; // Create a final variable for v3
+            final int finaln = n;
             boton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -152,21 +153,27 @@ public class Minijuego2 extends JPanel{
                         n++;
                     }
                     else if(n!=0){
-                        n--;
+                        n=0;
                     }
-                    inicio();
+                    if(finaln!=2){
+                        inicio();
+                    }
+                    ventana.dispose();
                 }
             });
             boton2.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                if (numero == finalV2) {
-                    n++;
-                } else if (n != 0) {
-                    n--;
+                    if (numero == finalV2) {
+                        n++;
+                    } else if (n != 0) {
+                        n=0;
+                    }
+                    if(finaln!=2){
+                        inicio();
+                    }
+                    ventana.dispose();
                 }
-                inicio();
-            }
             });
             boton3.addActionListener(new ActionListener() {
                 @Override
@@ -176,7 +183,10 @@ public class Minijuego2 extends JPanel{
                     } else if (n != 0) {
                         n=0;
                     }
-                    inicio();
+                    if(finaln!=2){
+                        inicio();
+                    }
+                    ventana.dispose();
                 }
             });
         
@@ -205,16 +215,29 @@ public class Minijuego2 extends JPanel{
             panelRelleno.setPreferredSize(new Dimension(1, 50));
             panelRelleno.setOpaque(false);
 
+            JPanel panelBotonesRelleno = new JPanel();
             panelBotonesRelleno.setLayout(new BoxLayout(panelBotonesRelleno, BoxLayout.Y_AXIS));
             panelBotonesRelleno.add(panelBotones);
             panelBotonesRelleno.add(panelRelleno);
             panelBotonesRelleno.setOpaque(false);
-            
-            ////////
+
             labelFondo.add(panelSuperior, BorderLayout.NORTH);
             labelFondo.add(panelCentral, BorderLayout.CENTER);
             labelFondo.add(panelBotonesRelleno, BorderLayout.SOUTH);
-            //////////
+            ventana.setContentPane(labelFondo);
+        
+            ventana.addComponentListener(new ComponentAdapter() {
+                @Override
+                public void componentResized(ComponentEvent e) {
+                    int width = ventana.getWidth();
+                    int height = ventana.getHeight();
+                    ImageIcon imagen = new ImageIcon(System.getProperty("user.dir")+"\\src\\recursos\\assets\\imagenes\\backgrounds\\minijuegos\\mj2_fondo.jpg");
+                    imagen = new ImageIcon(imagen.getImage().getScaledInstance(width, height, Image.SCALE_DEFAULT));
+                    labelFondo.setIcon(imagen);
+                }
+            });
+
+            ventana.setVisible(true); // Muestra la ventana
     }
     
 }

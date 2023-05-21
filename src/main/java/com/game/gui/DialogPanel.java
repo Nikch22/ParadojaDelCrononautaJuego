@@ -21,6 +21,7 @@ import org.json.simple.JSONObject;
 //Libreria javazoom para manejar los audios
 import javazoom.jl.player.Player;
 import javazoom.jl.decoder.JavaLayerException;
+import main.java.com.game.minijuegos.Minijuego2;
 import main.java.com.game.utils.CustomDialog;
 
 public class DialogPanel extends JPanel {
@@ -251,6 +252,8 @@ public class DialogPanel extends JPanel {
                     }
                 } else {
                     //Lógica del Minijuego
+                    Minijuego2 mj2 = new Minijuego2();
+                    mj2.inicio();
                     System.out.println("Se llama a Minijuego");
                 }
 
