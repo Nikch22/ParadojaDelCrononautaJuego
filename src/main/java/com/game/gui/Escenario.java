@@ -14,7 +14,6 @@ import javax.sound.sampled.*;
 public class Escenario extends JPanel {
 
     private ImagePanel imagePanel;
-    private Clip audioClip;
 
     public Escenario(String imagePath) {
         // Configuración inicial del panel
@@ -42,25 +41,6 @@ public class Escenario extends JPanel {
         // Asegurarse de que los cambios se apliquen
         revalidate();
         repaint();
-    }
-
-    public void playAudio(String audioPath) {
-        try {
-            // Abrir el archivo de audio
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(getClass().getResource(audioPath));
-
-            // Obtener un clip de audio y cargarlo con el audio del stream
-            audioClip = AudioSystem.getClip();
-            audioClip.open(audioStream);
-
-            // Reproducir el clip
-            audioClip.start();
-            // Para que el audio se repita continuamente
-            //audioClip.loop(Clip.LOOP_CONTINUOUSLY);
-
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            e.printStackTrace();
-        }
     }
 
     public void addPanel(JPanel panel, String position) {
