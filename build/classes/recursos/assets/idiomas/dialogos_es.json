@@ -103,7 +103,7 @@
             },
             {
                 "personaje": "Guion",
-                "frase": "~ Súbitamente, un grupo de bandidos emerge de la niebla, armados y amenazantes. Alex se prepara para enfrentarlos, pero un guerrero desconocido aparece y los enfrenta hábilmente, salvando a Alex. ~",
+                "frase": "~ Súbitamente, un grupo de bandidos emerge de la niebla, armados y amenazantes. Aldric se prepara para enfrentarlos, pero un guerrero desconocido aparece y los enfrenta hábilmente, salvando a Aldric. ~",
                 "background": "p2_bg_3", 
                 "instrumental": "p2_grecia", 
                 "narracion": ""
@@ -117,7 +117,7 @@
             },
             {
                 "personaje": "Aldric",
-                "frase": "Gracias por salvarme. Mi nombre es Alex. Soy un científico, y…creo que he viajado en el tiempo por accidente. No sé dónde me encuentro.",
+                "frase": "Gracias por salvarme. Mi nombre es Aldric. Soy un científico, y…creo que he viajado en el tiempo por accidente. No sé dónde me encuentro.",
                 "background": "p2_bg_4", 
                 "instrumental": "p2_grecia", 
                 "narracion": "p2_3_aldric"
@@ -173,7 +173,7 @@
             },
             {
                 "personaje": "Darius",
-                "frase": "Por supuesto, Alex. Juntos enfrentaremos los desafíos y te ayudaré a encontrar lo que buscas.",
+                "frase": "Por supuesto, Aldric. Juntos enfrentaremos los desafíos y te ayudaré a encontrar lo que buscas.",
                 "background": "p2_bg_8", 
                 "instrumental": "p2_grecia", 
                 "narracion": "p2_8_darius"
@@ -238,7 +238,7 @@
             },
             {
                 "personaje": "Aldric",
-                "frase": "Mi nombre es Alex. Soy un científico... (~ se detiene, dudando en revelar su origen, en ese momento siente un repentino dolor de cabeza y ve la imagen de unas inscripciones~ ) ...y estoy buscando algo importante.",
+                "frase": "Mi nombre es Aldric. Soy un científico... (~ se detiene, dudando en revelar su origen, en ese momento siente un repentino dolor de cabeza y ve la imagen de unas inscripciones~ ) ...y estoy buscando algo importante.",
                 "background": "p3_bg_2", 
                 "instrumental": "p3_medieval", 
                 "narracion": "p3_3_aldric"

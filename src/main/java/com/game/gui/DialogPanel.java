@@ -21,13 +21,19 @@ import org.json.simple.JSONObject;
 //Libreria javazoom para manejar los audios
 import javazoom.jl.player.Player;
 import javazoom.jl.decoder.JavaLayerException;
+import main.java.com.game.utils.CustomDialog;
 
 public class DialogPanel extends JPanel {
 
     private JLabel characterImageLabel;
     private JTextPane dialogTextPane;
     private JLabel clickIconLabel;
+    private JLabel homeIconLabel;
+    private JLabel exitIconLabel;
     private Map<String, ArrayList<JSONObject>> dialogos;
+    String personaje;
+    String frase;
+    private JPanel iconPanel;
     private int dialogoActual = 0;
     private int pantallaActualIndex = 1;
     private String pantallaActual = "pantalla" + pantallaActualIndex;
@@ -60,6 +66,20 @@ public class DialogPanel extends JPanel {
         setBackground(new Color(185, 185, 185, 100));
 
         setPreferredSize(new Dimension(Integer.MAX_VALUE, 150));
+
+        // Creacion y configuracion de los íconos de inicio y salida
+        String homeIconPath = "/recursos/assets/imagenes/iconos/casa_claro.png";
+        String exitIconPath = "/recursos/assets/imagenes/iconos/salida_claro.png";
+
+        ImageIcon homeIconImage = new ImageIcon(getClass().getResource(homeIconPath));
+        Image homeImage = homeIconImage.getImage().getScaledInstance(30, 30, Image.SCALE_DEFAULT);
+        homeIconImage = new ImageIcon(homeImage);
+        homeIconLabel = new JLabel(homeIconImage);
+
+        ImageIcon exitIconImage = new ImageIcon(getClass().getResource(exitIconPath));
+        Image exitImage = exitIconImage.getImage().getScaledInstance(30, 30, Image.SCALE_DEFAULT);
+        exitIconImage = new ImageIcon(exitImage);
+        exitIconLabel = new JLabel(exitIconImage);
 
         // Crear y configurar la imagen del personaje
         ImageIcon characterImageIcon = new ImageIcon(getClass().getResource(characterImagePath));
@@ -151,6 +171,27 @@ public class DialogPanel extends JPanel {
             }
         }, AWTEvent.MOUSE_EVENT_MASK | AWTEvent.MOUSE_MOTION_EVENT_MASK);
 
+        // Agregar un MouseListener a los íconos de inicio y salida
+        homeIconLabel.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                dialogoActual = 0;
+                pantallaActualIndex = 1;
+                pantallaActual = "pantalla1";
+                frase = "";
+                personaje = "";
+                setNuevoEscenario("/recursos/assets/imagenes/backgrounds/p1_bg_1.jpg");
+                // Aquí agregar la lógica para ir al inicio
+                referenciaJuego.ventanaPrincipal.cambiarAPantalla("MenuInicio");
+            }
+        });
+
+        exitIconLabel.addMouseListener(new MouseAdapter() {
+            public void mouseClicked(MouseEvent e) {
+                // Aquí agregar la lógica para salir del juego
+                salir();
+            }
+        });
+
         // Agregar un MouseListener al panel para detectar clics
         addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
@@ -164,16 +205,13 @@ public class DialogPanel extends JPanel {
                 eventMouseClicked();
             }
         });
+
+        // Agrego el panel de iconos al escenario
+        JPanel iconPanel = createIconPanel();
+        this.iconPanel = iconPanel;
+        referenciaJuego.getEscenarioActual().addPanel(iconPanel, BorderLayout.EAST);
     }
 
-//    // Sobrescribimos paintComponent para dibujar la imagen de fondo
-//    @Override
-//    protected void paintComponent(Graphics g) {
-//        super.paintComponent(g);
-//        if (backgroundImage != null) {
-//            g.drawImage(backgroundImage, 0, 0, getWidth(), getHeight(), this);
-//        }
-//    }
     public void eventMouseClicked() {
         // Aquí agregar la lógica para cambiar el diálogo cuando el panel es clickeado
         if (dialogoActual != -1) {
@@ -187,10 +225,9 @@ public class DialogPanel extends JPanel {
                 if (!dialogo.get("personaje").equals("Minijuego")) {
                     System.out.println(pantallaActual);
 
-                    String personaje = (String) dialogo.get("personaje");
+                    personaje = (String) dialogo.get("personaje");
                     String backgroundName = (String) dialogo.get("background");
                     nuevoEscenarioPath = "/recursos/assets/imagenes/backgrounds/" + backgroundName + ".jpg";
-                    String frase;
                     if (!personaje.equals("Guion") && !personaje.equals("Narrador") && !personaje.equals("Script") && !personaje.equals("Narrator")) {
                         frase = (String) personaje + ": " + dialogo.get("frase");
                     } else {
@@ -207,7 +244,6 @@ public class DialogPanel extends JPanel {
                         String narracion = (String) dialogo.get("narracion");
                         if (narracion != "") {
                             // Detener el audio en curso antes de iniciar uno nuevo
-                            stopAudio();
                             String pathAudio = "/recursos/assets/audio/narraciones/" + idiomaConfigurado + "/" + narracion + ".mp3";
                             playAudio(pathAudio);
 
@@ -225,10 +261,25 @@ public class DialogPanel extends JPanel {
                     pantallaActual = "pantalla" + pantallaActualIndex;
                 } else {
                     System.out.println("Historia Terminada!");
+                    dialogoActual = 0;
+                    pantallaActualIndex = 1;
+                    pantallaActual = "pantalla1";
+                    frase = "";
+                    personaje = "";
+                    setNuevoEscenario("/recursos/assets/imagenes/backgrounds/p1_bg_1.jpg");
                     referenciaJuego.ventanaPrincipal.cambiarAPantalla("MenuInicio");
                 }
             }
         }
+    }
+
+    public JPanel createIconPanel() {
+        // Crear un panel para contener los íconos de inicio y salida
+        JPanel iconPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        iconPanel.add(homeIconLabel);
+        iconPanel.add(exitIconLabel);
+        iconPanel.setOpaque(false);
+        return iconPanel;
     }
 
     public void setDialogCharacterImage(String personaje) {
@@ -253,12 +304,15 @@ public class DialogPanel extends JPanel {
         Escenario escenarioActual = referenciaJuego.getEscenarioActual();
         escenarioActual.removePanel(DialogPanel.this);
         escenarioActual.setImageBackground(pathNuevoEscenario);
+        // Vuelve a agregar el panel de iconos al escenario
+        referenciaJuego.getEscenarioActual().addPanel(iconPanel, BorderLayout.EAST);
         escenarioActual.addPanel(DialogPanel.this, BorderLayout.SOUTH);
     }
 
     public void playAudio(final String audioPath) {
         // Detener el audio en curso antes de iniciar uno nuevo
         stopAudio();
+
         // El resto del método playAudio() existente ...
         SwingWorker<Void, Void> audioWorker = new SwingWorker<>() {
             @Override
@@ -293,4 +347,36 @@ public class DialogPanel extends JPanel {
             audioPlayer = null;
         }
     }
+
+    private void salir() {
+        System.out.println("Salir seleccionado.");
+        // Guarda los valores actuales para poder restaurarlos luego
+        Color oldBackgroundColor = UIManager.getColor("OptionPane.background");
+        Color oldButtonColor = UIManager.getColor("Button.background");
+
+        // Define los nuevos colores
+        UIManager.put("OptionPane.background", new Color(50, 50, 50));  // Oscuro
+        UIManager.put("Panel.background", new Color(50, 50, 50));  // Oscuro
+        UIManager.put("Button.background", new Color(200, 200, 200));  // Gris claro
+
+        CustomDialog customDialog = new CustomDialog();
+        Object[] options = {"Sí, salir", "No, quedarme"};  // Personalizar textos de los botones
+
+        int confirm = JOptionPane.showOptionDialog(
+                null,
+                customDialog,
+                "Solicitud de Confirmación",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.PLAIN_MESSAGE,
+                null, options, options[1]);
+        if (confirm == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+
+        // Restaura los colores antiguos
+        UIManager.put("OptionPane.background", oldBackgroundColor);
+        UIManager.put("Panel.background", oldBackgroundColor);
+        UIManager.put("Button.background", oldButtonColor);
+    }
+
 }
