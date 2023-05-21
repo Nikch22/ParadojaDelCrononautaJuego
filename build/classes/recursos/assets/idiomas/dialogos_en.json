@@ -62,7 +62,7 @@
                 "frase": "No! I have to stop this!",
                 "background": "p1_bg_4", 
                 "instrumental": "p1_laboratorio", 
-                "narracion": ""
+                "narracion": "p1_5_aldric"
             },
             {
                 "personaje": "Script",
@@ -578,7 +578,7 @@
             },
             {
                 "personaje": "Aldric",
-                "frase": "I did it! I finally have the final piece for the time machine and can go back to my time. Despite the challenges, I succeeded. As for you... just like a seed that grows and flourishes in fertile soil, the difficulties of the past nourish a prosperous future filled with progress.",
+                "frase": "I did it! I finally have the final piece for the time machine and can go back to my time. Despite the challenges, I succeeded. ~ As for you... just like a seed that grows and flourishes in fertile soil, the difficulties of the past nourish a prosperous future filled with progress. ~",
                 "background": "p5_bg_8", 
                 "instrumental": "p5_guerra", 
                 "narracion": "p5_6_aldric"
@@ -695,7 +695,7 @@
                 "frase": "Although Aldric thought he had found utopia, reality was darker than it seemed. Humanity had lost its essence amid technology and progress.",
                 "background": "p6_bg_9", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion": "p6_5_narrador"
             },
             {
                 "personaje": "Script",
