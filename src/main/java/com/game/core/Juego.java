@@ -24,7 +24,8 @@ public class Juego {
     private Minijuego minijuegoActual;
     private DialogPanel dialogPanel;
     private Escenario escenarioActual;
-    private String idioma = "Es";
+    private String idioma;
+    private String archivoDialogos;
 
     public Juego() {
         // Aquí se inicializa el primer diálogo de la historia
@@ -34,10 +35,14 @@ public class Juego {
     }
 
     public void iniciarHistoria() {
+        idioma = GameSettings.getLanguage();
+        archivoDialogos = "/recursos/assets/idiomas/dialogos_" + idioma + ".json";
+        System.out.println(GameSettings.getLanguage());
         // Llamas al método cargarDialogos y guardas el resultado en una variable
         Map<String, ArrayList<JSONObject>> dialogosPorPantalla = cargarDialogos();
-    // Crear un nuevo DialogPanel y agregarlo al escenario
-        dialogPanel = new DialogPanel(dialogosPorPantalla,this);
+        // Crear un nuevo DialogPanel y agregarlo al escenario
+        dialogPanel = new DialogPanel(dialogosPorPantalla, this);
+        
         escenarioActual.addPanel(dialogPanel, BorderLayout.SOUTH);
     }
 
@@ -45,13 +50,8 @@ public class Juego {
         Map<String, ArrayList<JSONObject>> dialogosPorPantalla = new HashMap<>();
 
         try {
-            // Carga el archivo JSON
-            String archivoDialogos;
-            if (idioma.equals("Es")) {
-                archivoDialogos = "/recursos/assets/idiomas/dialogos_es.json";
-            } else if (idioma.equals("En")) {
-                archivoDialogos = "/recursos/assets/idiomas/dialogos_en.json";
-            } else {
+            // Carga el archivo JSON            
+            if (!idioma.equals("es") && !idioma.equals("en")) {
                 // Si el idioma no está especificado correctamente, puedes lanzar una excepción o establecer un valor predeterminado.
                 throw new IllegalArgumentException("Idioma no válido: " + idioma);
             }

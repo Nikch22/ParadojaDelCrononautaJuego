@@ -4,8 +4,14 @@ import main.java.com.game.core.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.MouseInputAdapter;
 import javax.swing.text.Caret;
@@ -28,6 +34,7 @@ public class DialogPanel extends JPanel {
     private Juego referenciaJuego;
     private String backgroundEscenarioActual;
     private String nuevoEscenarioPath;
+    private String idiomaConfigurado = (String) GameSettings.getLanguage();
 
     public DialogPanel(Map<String, ArrayList<JSONObject>> dialogosPorPantalla, Juego referenciaJuego) {
         this.referenciaJuego = referenciaJuego;
@@ -175,6 +182,15 @@ public class DialogPanel extends JPanel {
                 JSONObject dialogo = dialogos.get(pantallaActual).get(dialogoActual);
                 if (!dialogo.get("personaje").equals("Minijuego")) {
                     System.out.println(pantallaActual);
+                    //Si está activa la opción de narracion por voz
+                    if(GameSettings.isVoiceNarrationEnabled()) {
+                        String narracion = (String) dialogo.get("narracion");
+                        if(narracion != ""){
+                        String pathAudio = "/recursos/assets/audio/narraciones/" + idiomaConfigurado + "/" + narracion + ".mp3";
+                            System.out.println(pathAudio);
+                        playAudio(pathAudio);
+                        }
+                    }
 
                     String personaje = (String) dialogo.get("personaje");
                     String backgroundName = (String) dialogo.get("background");
@@ -231,5 +247,26 @@ public class DialogPanel extends JPanel {
         escenarioActual.removePanel(DialogPanel.this);
         escenarioActual.setImageBackground(pathNuevoEscenario);
         escenarioActual.addPanel(DialogPanel.this, BorderLayout.SOUTH);
+    }
+    
+    
+    public void playAudio(String audioPath) {
+        Clip audioClip;
+        try {
+            // Abrir el archivo de audio
+            AudioInputStream audioStream = AudioSystem.getAudioInputStream(getClass().getResource(audioPath));
+
+            // Obtener un clip de audio y cargarlo con el audio del stream
+            audioClip = AudioSystem.getClip();
+            audioClip.open(audioStream);
+
+            // Reproducir el clip
+            audioClip.start();
+            // Para que el audio se repita continuamente
+            //audioClip.loop(Clip.LOOP_CONTINUOUSLY);
+
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
     }
 }
