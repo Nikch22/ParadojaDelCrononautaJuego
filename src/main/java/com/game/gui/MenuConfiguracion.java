@@ -61,13 +61,13 @@ public class MenuConfiguracion extends Menu {
         addSpace(70);
 
         JLabel labelNarracion = new JLabel("Narración por Voz");
-        labelNarracion.setForeground(new Color(250, 250, 240, 200));
+        labelNarracion.setForeground(new Color(250, 250, 240));
         labelNarracion.setFont(new Font("Oswald", Font.BOLD, 26));
 
         JCheckBox checkBoxNarracion = new JCheckBox("Activar voces");
         checkBoxNarracion.setFont(new Font("Oswald", Font.BOLD, 22));
         checkBoxNarracion.setOpaque(false);
-        checkBoxNarracion.setForeground(new Color(250, 250, 240, 200));
+        checkBoxNarracion.setForeground(new Color(220, 194, 184));
         checkBoxNarracion.addItemListener(new ItemListener() {
             public void itemStateChanged(ItemEvent e) {
                 if(e.getStateChange() == ItemEvent.SELECTED) { 
@@ -91,7 +91,7 @@ public class MenuConfiguracion extends Menu {
         addSpace(35);
 
         JLabel labelIdioma = new JLabel("Idioma");
-        labelIdioma.setForeground(new Color(250, 250, 240, 200));
+        labelIdioma.setForeground(new Color(250, 250, 240));
         labelIdioma.setFont(new Font("Oswald", Font.BOLD, 26));
 
         ImageIcon iconEsp = new ImageIcon(new ImageIcon(getClass().getClassLoader().getResource("recursos/assets/imagenes/iconos/bandera_es_1.png")).getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT));
@@ -137,6 +137,14 @@ public class MenuConfiguracion extends Menu {
         System.out.println("Idioma seleccionado: " + idioma);
         // Cambiar el idioma
         GameSettings.setLanguage(idioma);
+        MenuInicio menuInicio = ventanaPrincipal.getMenuInicio();
+        menuInicio.setBackground("/recursos/assets/imagenes/backgrounds/portada_"+ idioma +".png");
+        menuInicio = new MenuInicio(ventanaPrincipal);
+        ventanaPrincipal.getMainPanel().remove(1);
+        ventanaPrincipal.getMainPanel().add(menuInicio.getBackgroundPanel(), "MenuInicio");
+        menuInicio.revalidate();
+        menuInicio.repaint();
+        
         ventanaPrincipal.cambiarAPantalla("MenuInicio");
     }
 

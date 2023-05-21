@@ -33,6 +33,7 @@ public class DialogPanel extends JPanel {
     private Map<String, ArrayList<JSONObject>> dialogos;
     String personaje;
     String frase;
+    private String instrumental;
     private JPanel iconPanel;
     private int dialogoActual = 0;
     private int pantallaActualIndex = 1;
@@ -100,6 +101,7 @@ public class DialogPanel extends JPanel {
                 /* Sobrescribir para ignorar */ }
 
         };
+        //playAudio("/recursos/assets/audio/musica/"+ dialogos.get("pantalla1").get(0).get("instrumental") + ".mp3");
         dialogTextPane.setText(initialDialogText);
 
         // Configuración de la caja de texto
@@ -359,16 +361,17 @@ public class DialogPanel extends JPanel {
         UIManager.put("Panel.background", new Color(50, 50, 50));  // Oscuro
         UIManager.put("Button.background", new Color(200, 200, 200));  // Gris claro
 
-        CustomDialog customDialog = new CustomDialog();
+        CustomDialog customDialog = new CustomDialog(GameSettings.getLanguage());
         Object[] options = {"Sí, salir", "No, quedarme"};  // Personalizar textos de los botones
+        Object[] optionsEn = {"Yes, quit", "No, stay"};
 
         int confirm = JOptionPane.showOptionDialog(
                 null,
                 customDialog,
-                "Solicitud de Confirmación",
+                GameSettings.getLanguage().equals("en") ? "Confirmation Request" : "Solicitud de Confirmación",
                 JOptionPane.YES_NO_OPTION,
                 JOptionPane.PLAIN_MESSAGE,
-                null, options, options[1]);
+                null, GameSettings.getLanguage().equals("en") ? optionsEn : options, options[1]);
         if (confirm == JOptionPane.YES_OPTION) {
             System.exit(0);
         }
