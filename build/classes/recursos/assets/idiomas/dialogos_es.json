@@ -1,467 +1,701 @@
- {
+{
    "dialogos": {
-      "pantalla1": [
-         {
-            "personaje": "Aldric",
-            "frase": "Después de tantos años de investigación y experimentos, finalmente lo he logrado... Viajar en el tiempo ya no será solo un sueño."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric conecta unos cables a la máquina y toma un respiro profundo antes de encenderla. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Todo lo que necesito es ajustar las coordenadas... Establecer las fechas y... ¡listo!"
-         },
-         {
-           "personaje": "Minijuego",
-           "frase": ""          
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ La máquina comienza a zumbar y a brillar con una intensidad creciente. Aldric se acerca a la pantalla y observa con atención. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "¡Sí! ¡Lo estoy logrando! ¡Estoy viajando en el tiempo!"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "¿Qué está pasando? ¡No, no, no! ¡Esto no debería estar sucediendo!"
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ El laboratorio se llena de humo y la máquina del tiempo se vuelve inestable. Aldric intenta apagarla, pero es demasiado tarde. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "¡No! ¡Tengo que detener esto!"
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Se produce una gran explosión y un destello de luz ciega a Aldric. ~ "
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Cuando la luz se desvanece, Aldric ya no está en su laboratorio. Se encuentra en un lugar desconocido y aparentemente peligroso. ~"
-         }
-      ],
-      "pantalla2": [
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric se despierta en un lugar desconocido. ~"
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Desorientado y asustado, Aldric comienza a explorar el área. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "¿Dónde estoy? ¿Qué me ha ocurrido?"
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Súbitamente, un grupo de bandidos emerge de la niebla, armados y amenazantes. Alex se prepara para enfrentarlos, pero un guerrero desconocido aparece y los enfrenta hábilmente, salvando a Alex. ~"
-         },
-         {
-            "personaje": "Darius",
-            "frase": "Esos bandidos no volverán a molestarte. ¿Quién eres y cómo has llegado a este lugar?"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Gracias por salvarme. Mi nombre es Alex. Soy un científico, y…creo que he viajado en el tiempo por accidente. No sé dónde me encuentro."
-         },
-         {
-            "personaje": "Darius",
-            "frase": "Soy Darius. Aunque no comprendo del todo tu situación, te ayudaré a encontrar respuestas. Pero primero, debes aprender a sobrevivir en este mundo desconocido."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric y Darius viajan juntos hacia un campamento oculto en las montañas. Darius le enseña a Aldric habilidades de supervivencia, como encender fuegos, buscar alimentos y defenderse de posibles amenazas. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Nunca imaginé que estaría aprendiendo a sobrevivir en la antigua Grecia."
-         },
-         {
-            "personaje": "Darius",
-            "frase": "Y yo jamás pensé que estaría enseñando a un hombre de otro tiempo."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ En el campamento, Darius comparte con Aldric historias sobre la antigua Grecia y sus misterios. ~"
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ A medida que conversan, Aldric sospecha que la pieza que necesita para su máquina del tiempo podría estar oculta en un antiguo templo protegido por desafíos y trampas. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Creo que ese templo podría albergar la pieza que necesito. ¿Me acompañarás, Darius?"
-         },
-         {
-            "personaje": "Darius",
-            "frase": "Por supuesto, Alex. Juntos enfrentaremos los desafíos y te ayudaré a encontrar lo que buscas."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric y Darius se adentran en el templo y trabajan juntos para superar obstáculos y trampas del templo. ~"
-         },
-         {
-           "personaje": "Minijuego",
-           "frase": ""          
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Hasta finalmente encontrar la pieza. ~"
-         }
-      ],
-      "pantalla3": [
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric es transportado a la época medieval y se encuentra en un bullicioso mercado lleno de comerciantes, músicos y campesinos. ~"
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric explora el mercado con curiosidad. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "¿Dónde estoy ahora? Todo parece tan diferente..."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ De repente, unos guardias se acercan a Aldric, intrigados por su extraña apariencia y comportamiento. ~"
-         },
-         {
-            "personaje": "Guardia",
-            "frase": "¡Hola, forastero! No te hemos visto por aquí antes. ¿Quién eres y qué haces aquí?"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Mi nombre es Alex. Soy un científico... (~ se detiene, dudando en revelar su origen, en ese momento siente un repentino dolor de cabeza y ve la imagen de unas inscripciones~ ) ...y estoy buscando algo importante."
-         },
-         {
-            "personaje": "Guardia",
-            "frase": "Tal vez deberías hablar con nuestro sabio anciano. Él conoce muchas historias y secretos de nuestro reino."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Los guardias llevan a Aldric con el sabio anciano, un hombre de aspecto amable y conocedor de los misterios del reino.~"
-         },
-         {
-            "personaje": "Anciano",
-            "frase": "¿Qué buscas, joven viajero? Veo en tus ojos que vienes de lejos."
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Mi nombre es Aldric. Soy un científico y he viajado en el tiempo. Necesito encontrar un mensaje oculto en una inscripción que contiene una pista para reparar mi máquina del tiempo y regresar a mi época."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ El Anciano, intrigado por la historia de Aldric, decide ayudarlo en su búsqueda. ~"
-         },
-         {
-            "personaje": "Anciano",
-            "frase": "Creo conocer la inscripción de la que hablas, pero está en una torre abandonada, protegida por acertijos y trampas mortales. Si estás dispuesto a enfrentar esos desafíos, te guiaré hasta allí."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric y el anciano emprenden la peligrosa travesía hacia la torre abandonada. Juntos, enfrentan los desafíos de la torre hasta encontrar las inscripciones antiguas. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Es increíble pensar que esta tierra, que parece tan primitiva, algún día se convertirá en el mundo moderno que conozco."
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "~ ¿Cómo será el mundo del futuro?, necesito saberlo. ~"
-         },
-         {
-            "personaje": "Anciano",
-            "frase": "Nuestro pasado siempre guarda secretos, pero también nos enseña valiosas lecciones."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Después de superar los obstáculos y trampas, Aldric y el anciano encuentran la inscripción en una cámara secreta de la torre. ~"
-         },
-         {
-           "personaje": "Minijuego",
-           "frase": ""          
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric descifra el mensaje oculto, revelando la información que necesita para reparar su máquina del tiempo. ~"
-         },
-         {
-            "personaje": "Anciano",
-            "frase": "Has demostrado ser un buscador incansable de la verdad. ¡Buena suerte en tu viaje, Aldric!"
-         }
-      ],
-      "pantalla4": [
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric es transportado a una nueva época y se encuentra en una calle empedrada. Observa a su alrededor y nota que la gente viste de manera diferente y escucha murmullos sobre una revolución. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "¿Dónde estoy ahora? No parece ni la antigua Grecia ni la época medieval..."
-         },
-         {
-            "personaje": "Transeunte",
-            "frase": "¡Estamos en plena Revolución Francesa, amigo! ¡Cuidado con los espías y los enemigos de la revolución!"
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric sigue investigando y escucha rumores sobre una caja con un mecanismo enigmático que se encuentra en el palacio real de Versalles. ~"
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Con la información obtenida, Aldric decide buscar el palacio real de Versalles, donde espera encontrar la caja con el mecanismo que necesita. ~"
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ En su búsqueda, se cruza con un espía enigmático llamado Jean. ~ "
-         },
-         {
-            "personaje": "Jean",
-            "frase": "No puedo evitar notar que pareces perdido y desorientado. Tal vez pueda ofrecerte alguna información útil."
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Estoy buscando el palacio real de Versalles. Tengo que encontrar una caja que contiene un mecanismo importante para mi... propósito."
-         },
-         {
-            "personaje": "Jean",
-            "frase": "El palacio de Versalles es un lugar lleno de misterios y secretos. Puedo darte algunas pistas para acceder a las áreas ocultas, pero tendrás que ser sigiloso y cuidadoso en tu búsqueda."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric llega al palacio real de Versalles y comienza a explorar sus laberínticos pasillos, siguiendo las pistas proporcionadas por Jean. ~"
-         },
-         {
-           "personaje": "Minijuego",
-           "frase": ""          
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Durante su búsqueda, descubre habitaciones ocultas y corredores secretos que revelan aspectos desconocidos de la vida en la corte. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Nunca imaginé que este palacio sería tan complicado y misterioso."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Luego de explorar bastante el intrincado palacio, Aldric encuentra la caja con el mecanismo que necesita. ~"
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Para abrirla, debe resolver un desafío que requiere de toda su habilidad e ingenio. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Este mecanismo parece difícil, pero sé que puedo con esto."
-         },
-         {
-           "personaje": "Minijuego",
-           "frase": ""          
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Después de un arduo intento, Aldric resuelve el desafío y obtiene la pieza que necesita para reparar su máquina del tiempo. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Lo logré. Tengo la pieza que necesito para mi máquina del tiempo. Ahora debo continuar mi camino y regresar a mi época. Gracias, Jean, por tu ayuda."
-         },
-         {
-            "personaje": "Jean",
-            "frase": "Ha sido un placer. Aldric! Mientras continúas tu travesía, no olvides que lo que anhelamos puede tomar formas inesperadas. Buena suerte en tu viaje y dale buen uso a lo que has aprendido."
-         }
-      ],
-      "pantalla5": [
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric se encuentra en una ciudad bombardeada, con edificios en ruinas y el sonido de las sirenas en la distancia. Está claro que está en una zona de guerra. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "¿Dónde estoy? Esta devastación... esos símbolos… ¿podría ser la Segunda Guerra Mundial? Debo encontrar esa última pieza para la máquina del tiempo y salir de aquí."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ En su búsqueda por la ciudad, Aldric se topa con un mensaje cifrado que contiene información sobre la ubicación de un dispositivo en una base militar. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Este mensaje cifrado podría ser la clave para encontrar el dispositivo que necesito. Pero primero, debo descifrarlo."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric utiliza sus conocimientos para descifrar el mensaje. Descubre que el dispositivo está en una base militar cercana. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "La base militar no está lejos de aquí. Debo llegar allí y obtener el dispositivo sin ser detectado."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric se dirige hacia la base militar, incursionando en terreno peligroso y sorteando los obstáculos es esta oscura guerra. ~"
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Al llegar a la base, Aldric se infiltra en ella y se dispone a buscar el dispositivo. Utiliza su conocimiento de la época y tácticas militares que aprendió de su tiempo en el ejercito cuando joven para pasar desapercibido. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "El éxito de mi misión depende de mi capacidad para pasar desapercibido y encontrar ese dispositivo."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric finalmente encuentra el dispositivo en una sala secreta de la base. Debe resolver un enigma complejo para desbloquear el dispositivo y acceder a la última pieza que necesita. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Este es el último obstáculo que me separa de la pieza que necesito. Debo resolverlo para completar mi misión."
-         },
-         {
-           "personaje": "Minijuego",
-           "frase": ""          
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Después de desbloquear el dispositivo, Aldric obtiene la última pieza para su máquina del tiempo y escapa de la base militar sin ser detectado. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Lo conseguí! Al fin tengo la última pieza para la máquina del tiempo y puedo regresar a mi época. A pesar de los desafíos, lo logré. ~ En cuanto a ustedes… al igual que la semilla que crece y florece en tierra fértil, las dificultades del pasado nutren un futuro próspero y lleno de progreso. ~"
-         }
-      ],
-      "pantalla6": [
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric regresa a su época y, emocionado, completa la máquina del tiempo. ~"
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Con gran anticipación, y deseo de cumplir su objetivo inicial, decide probarla una vez más, pero ahora viajará hacia el futuro. Configura la máquina para llevarlo varios siglos adelante y se lanza a la aventura. ~"
-         },
-         {
-           "personaje": "Minijuego",
-           "frase": ""          
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "¡Finalmente lo logré! Ahora es el momento de descubrir qué depara el futuro para la humanidad."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Al llegar al futuro, Aldric sale del laboratorio y se encuentra con una ciudad tecnológica, avanzada y próspera. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "¡Es increíble! Todo lo que he soñado y más. La humanidad realmente ha prosperado y creado un mundo maravilloso."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Mientras explora la ciudad, Aldric conoce a los habitantes del futuro, quienes le cuentan sobre los avances tecnológicos y cómo han mejorado la calidad de vida. Sin embargo, también comparten sus preocupaciones sobre la creciente dependencia de la tecnología y la pérdida de contacto humano. ~ "
-         },
-         {
-            "personaje": "Habitante del futuro",
-            "frase": "A pesar de nuestras maravillosas creaciones, la humanidad sigue buscando un equilibrio entre la tecnología y nuestra propia humanidad."
-         },
-         {
-            "personaje": "Guion",
-            "frase": "~ Aldric reflexiona sobre las palabras del habitante del futuro y se da cuenta de que, aunque ha alcanzado su objetivo de viajar al futuro, su verdadero propósito es aprender de los errores del pasado y aplicar ese conocimiento para construir un mundo mejor. ~"
-         },
-         {
-            "personaje": "Aldric",
-            "frase": "Entiendo lo que debo hacer ahora. Regresaré a mi tiempo y compartiré lo que he aprendido. Juntos, podemos construir un futuro mejor y más equilibrado."
-         },
-         {
-            "personaje": "Narrador",
-            "frase": "Aunque Aldric creyó haber encontrado la utopía, la realidad era más sombría de lo que parecía. La humanidad había perdido su esencia en medio de la tecnología y el progreso."
-         }
-      ]
+       "pantalla1": [
+           {
+               "personaje": "Aldric",
+               "frase": "Después de tantos años de investigación y experimentos, finalmente lo he logrado... Viajar en el tiempo ya no será solo un sueño.",
+               "background": "p1_bg_1", 
+               "instrumental": "p1_laboratorio"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric conecta unos cables a la máquina y toma un respiro profundo antes de encenderla. ~",
+               "background": "p1_bg_2", 
+               "instrumental": "p1_laboratorio"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Todo lo que necesito es ajustar las coordenadas... Establecer las fechas y... ¡listo!",
+               "background": "p1_bg_2", 
+               "instrumental": "p1_laboratorio"
+           },
+           {
+               "personaje": "Minijuego",
+               "frase": "", 
+               "background": "", 
+               "instrumental": ""
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ La máquina comienza a zumbar y a brillar con una intensidad creciente. Aldric se acerca a la pantalla y observa con atención. ~",
+               "background": "p1_bg_1", 
+               "instrumental": "p1_laboratorio"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "¡Sí! ¡Lo estoy logrando! ¡Estoy viajando en el tiempo!",
+               "background": "p1_bg_3", 
+               "instrumental": "p1_laboratorio"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "¿Qué está pasando? ¡No, no, no! ¡Esto no debería estar sucediendo!",
+               "background": "p1_bg_3", 
+               "instrumental": "p1_laboratorio"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ El laboratorio se llena de humo y la máquina del tiempo se vuelve inestable. Aldric intenta apagarla, pero es demasiado tarde. ~",
+               "background": "p1_bg_4", 
+               "instrumental": "p1_laboratorio"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "¡No! ¡Tengo que detener esto!",
+               "background": "p1_bg_4", 
+               "instrumental": "p1_laboratorio"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Se produce una gran explosión y un destello de luz ciega a Aldric. ~ ",
+               "background": "p1_bg_4", 
+               "instrumental": "p1_laboratorio"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Cuando la luz se desvanece, Aldric ya no está en su laboratorio. Se encuentra en un lugar desconocido y aparentemente peligroso. ~",
+               "background": "p1_bg_4", 
+               "instrumental": "p1_laboratorio"
+           }
+       ],
+       "pantalla2": [
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric se despierta en un lugar desconocido. ~",
+               "background": "p2_bg_1", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Desorientado y asustado, Aldric comienza a explorar el área. ~",
+               "background": "p2_bg_1", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "¿Dónde estoy? ¿Qué me ha ocurrido?",
+               "background": "p2_bg_2", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Súbitamente, un grupo de bandidos emerge de la niebla, armados y amenazantes. Alex se prepara para enfrentarlos, pero un guerrero desconocido aparece y los enfrenta hábilmente, salvando a Alex. ~",
+               "background": "p2_bg_3", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Darius",
+               "frase": "Esos bandidos no volverán a molestarte. ¿Quién eres y cómo has llegado a este lugar?",
+               "background": "p2_bg_3", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Gracias por salvarme. Mi nombre es Alex. Soy un científico, y…creo que he viajado en el tiempo por accidente. No sé dónde me encuentro.",
+               "background": "p2_bg_4", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Darius",
+               "frase": "Soy Darius. Aunque no comprendo del todo tu situación, te ayudaré a encontrar respuestas. Pero primero, debes aprender a sobrevivir en este mundo desconocido.",
+               "background": "p2_bg_4", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric y Darius viajan juntos hacia un campamento oculto en las montañas. Darius le enseña a Aldric habilidades de supervivencia, como encender fuegos, buscar alimentos y defenderse de posibles amenazas. ~",
+               "background": "p2_bg_5", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Nunca imaginé que estaría aprendiendo a sobrevivir en la antigua Grecia.",
+               "background": "p2_bg_6", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Darius",
+               "frase": "Y yo jamás pensé que estaría enseñando a un hombre de otro tiempo.",
+               "background": "p2_bg_6", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ En el campamento, Darius comparte con Aldric historias sobre la antigua Grecia y sus misterios. ~",
+               "background": "p2_bg_7", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ A medida que conversan, Aldric sospecha que la pieza que necesita para su máquina del tiempo podría estar oculta en un antiguo templo protegido por desafíos y trampas. ~",
+               "background": "p2_bg_7", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Creo que ese templo podría albergar la pieza que necesito. ¿Me acompañarás, Darius?",
+               "background": "p2_bg_8", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Darius",
+               "frase": "Por supuesto, Alex. Juntos enfrentaremos los desafíos y te ayudaré a encontrar lo que buscas.",
+               "background": "p2_bg_8", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric y Darius se adentran en el templo y trabajan juntos para superar obstáculos y trampas del templo. ~",
+               "background": "p2_bg_9", 
+               "instrumental": "p2_grecia"
+           },
+           {
+               "personaje": "Minijuego",
+               "frase": "", 
+               "background": "", 
+               "instrumental": ""
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Hasta finalmente encontrar la pieza. ~",
+               "background": "p2_bg_9", 
+               "instrumental": "p2_grecia"
+           }
+       ],
+       "pantalla3": [
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric es transportado a la época medieval y se encuentra en un bullicioso mercado lleno de comerciantes, músicos y campesinos. ~",
+               "background": "p3_bg_1", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric explora el mercado con curiosidad. ~",
+               "background": "p3_bg_1", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "¿Dónde estoy ahora? Todo parece tan diferente...",
+               "background": "p3_bg_1", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ De repente, unos guardias se acercan a Aldric, intrigados por su extraña apariencia y comportamiento. ~",
+               "background": "p3_bg_2", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Guardia",
+               "frase": "¡Hola, forastero! No te hemos visto por aquí antes. ¿Quién eres y qué haces aquí?",
+               "background": "p3_bg_2", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Mi nombre es Alex. Soy un científico... (~ se detiene, dudando en revelar su origen, en ese momento siente un repentino dolor de cabeza y ve la imagen de unas inscripciones~ ) ...y estoy buscando algo importante.",
+               "background": "p3_bg_2", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Guardia",
+               "frase": "Tal vez deberías hablar con nuestro sabio anciano. Él conoce muchas historias y secretos de nuestro reino.",
+               "background": "p3_bg_2", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Los guardias llevan a Aldric con el sabio anciano, un hombre de aspecto amable y conocedor de los misterios del reino.~",
+               "background": "p3_bg_3", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Anciano",
+               "frase": "¿Qué buscas, joven viajero? Veo en tus ojos que vienes de lejos.",
+               "background": "p3_bg_4", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Mi nombre es Aldric. Soy un científico y he viajado en el tiempo. Necesito encontrar un mensaje oculto en una inscripción que contiene una pista para reparar mi máquina del tiempo y regresar a mi época.",
+               "background": "p3_bg_4", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ El Anciano, intrigado por la historia de Aldric, decide ayudarlo en su búsqueda. ~",
+               "background": "p3_bg_4", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Anciano",
+               "frase": "Creo conocer la inscripción de la que hablas, pero está en una torre abandonada, protegida por acertijos y trampas mortales. Si estás dispuesto a enfrentar esos desafíos, te guiaré hasta allí.",
+               "background": "p3_bg_4", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric y el anciano emprenden la peligrosa travesía hacia la torre abandonada. Juntos, enfrentan los desafíos de la torre hasta encontrar las inscripciones antiguas. ~",
+               "background": "p3_bg_5", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Es increíble pensar que esta tierra, que parece tan primitiva, algún día se convertirá en el mundo moderno que conozco.",
+               "background": "p3_bg_6", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "~ ¿Cómo será el mundo del futuro?, necesito saberlo. ~",
+               "background": "p3_bg_7", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Anciano",
+               "frase": "Nuestro pasado siempre guarda secretos, pero también nos enseña valiosas lecciones.",
+               "background": "p3_bg_7", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Después de superar los obstáculos y trampas, Aldric y el anciano encuentran la inscripción en una cámara secreta de la torre. ~",
+               "background": "p3_bg_8", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Minijuego",
+               "frase": "", 
+               "background": "", 
+               "instrumental": ""
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric descifra el mensaje oculto, revelando la información que necesita para reparar su máquina del tiempo. ~",
+               "background": "p3_bg_8", 
+               "instrumental": "p3_medieval"
+           },
+           {
+               "personaje": "Anciano",
+               "frase": "Has demostrado ser un buscador incansable de la verdad. ¡Buena suerte en tu viaje, Aldric!",
+               "background": "p3_bg_8", 
+               "instrumental": "p3_medieval"
+           }
+       ],
+       "pantalla4": [
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric es transportado a una nueva época y se encuentra en una calle empedrada. Observa a su alrededor y nota que la gente viste de manera diferente y escucha murmullos sobre una revolución. ~",
+               "background": "p4_bg_1", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "¿Dónde estoy ahora? No parece ni la antigua Grecia ni la época medieval...",
+               "background": "p4_bg_1", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Transeunte",
+               "frase": "¡Estamos en plena Revolución Francesa, amigo! ¡Cuidado con los espías y los enemigos de la revolución!",
+               "background": "p4_bg_1", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric sigue investigando y escucha rumores sobre una caja con un mecanismo enigmático que se encuentra en el palacio real de Versalles. ~",
+               "background": "p4_bg_2", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Con la información obtenida, Aldric decide buscar el palacio real de Versalles, donde espera encontrar la caja con el mecanismo que necesita. ~",
+               "background": "p4_bg_4", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ En su búsqueda, se cruza con un espía enigmático llamado Jean. ~ ",
+               "background": "p4_bg_3", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Jean",
+               "frase": "No puedo evitar notar que pareces perdido y desorientado. Tal vez pueda ofrecerte alguna información útil.",
+               "background": "p4_bg_3", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Estoy buscando el palacio real de Versalles. Tengo que encontrar una caja que contiene un mecanismo importante para mi... propósito.",
+               "background": "p4_bg_3", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Jean",
+               "frase": "El palacio de Versalles es un lugar lleno de misterios y secretos. Puedo darte algunas pistas para acceder a las áreas ocultas, pero tendrás que ser sigiloso y cuidadoso en tu búsqueda.",
+               "background": "p4_bg_4", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric llega al palacio real de Versalles y comienza a explorar sus laberínticos pasillos, siguiendo las pistas proporcionadas por Jean. ~",
+               "background": "p4_bg_5", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Minijuego",
+               "frase": "", 
+               "background": "", 
+               "instrumental": ""          
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Durante su búsqueda, descubre habitaciones ocultas y corredores secretos que revelan aspectos desconocidos de la vida en la corte. ~",
+               "background": "p4_bg_6", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Nunca imaginé que este palacio sería tan complicado y misterioso.",
+               "background": "p4_bg_7", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Luego de explorar bastante el intrincado palacio, Aldric encuentra la caja con el mecanismo que necesita. ~",
+               "background": "p4_bg_8", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Para abrirla, debe resolver un desafío que requiere de toda su habilidad e ingenio. ~",
+               "background": "p4_bg_8", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Este mecanismo parece difícil, pero sé que puedo con esto.",
+               "background": "p4_bg_8", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Minijuego",
+               "frase": "", 
+               "background": "", 
+               "instrumental": ""          
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Después de un arduo intento, Aldric resuelve el desafío y obtiene la pieza que necesita para reparar su máquina del tiempo. ~",
+               "background": "p4_bg_8", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Lo logré. Tengo la pieza que necesito para mi máquina del tiempo. Ahora debo continuar mi camino y regresar a mi época. Gracias, Jean, por tu ayuda.",
+               "background": "p4_bg_9", 
+               "instrumental": "p4_revolucion"
+           },
+           {
+               "personaje": "Jean",
+               "frase": "Ha sido un placer. Aldric! Mientras continúas tu travesía, no olvides que lo que anhelamos puede tomar formas inesperadas. Buena suerte en tu viaje y dale buen uso a lo que has aprendido.",
+               "background": "p4_bg_9", 
+               "instrumental": "p4_revolucion"
+           }
+       ],
+       "pantalla5": [
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric se encuentra en una ciudad bombardeada, con edificios en ruinas y el sonido de las sirenas en la distancia. Está claro que está en una zona de guerra. ~",
+               "background": "p5_bg_1", 
+               "instrumental": "p5_guerra"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "¿Dónde estoy? Esta devastación... esos símbolos… ¿podría ser la Segunda Guerra Mundial? Debo encontrar esa última pieza para la máquina del tiempo y salir de aquí.",
+               "background": "p5_bg_1", 
+               "instrumental": "p5_guerra"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ En su búsqueda por la ciudad, Aldric se topa con un mensaje cifrado que contiene información sobre la ubicación de un dispositivo en una base militar. ~",
+               "background": "p5_bg_2", 
+               "instrumental": "p5_guerra"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Este mensaje cifrado podría ser la clave para encontrar el dispositivo que necesito. Pero primero, debo descifrarlo.",
+               "background": "p5_bg_2", 
+               "instrumental": "p5_guerra"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric utiliza sus conocimientos para descifrar el mensaje. Descubre que el dispositivo está en una base militar cercana. ~",
+               "background": "p5_bg_3", 
+               "instrumental": "p5_guerra"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "La base militar no está lejos de aquí. Debo llegar allí y obtener el dispositivo sin ser detectado.",
+               "background": "p5_bg_3", 
+               "instrumental": "p5_guerra"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric se dirige hacia la base militar, incursionando en terreno peligroso y sorteando los obstáculos es esta oscura guerra. ~",
+               "background": "p5_bg_3", 
+               "instrumental": "p5_guerra"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Al llegar a la base, Aldric se infiltra en ella y se dispone a buscar el dispositivo. Utiliza su conocimiento de la época y tácticas militares que aprendió de su tiempo en el ejercito cuando joven para pasar desapercibido. ~",
+               "background": "p5_bg_5", 
+               "instrumental": "p5_guerra"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "El éxito de mi misión depende de mi capacidad para pasar desapercibido y encontrar ese dispositivo.",
+               "background": "p5_bg_5", 
+               "instrumental": "p5_guerra"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric finalmente encuentra el dispositivo en una sala secreta de la base. Debe resolver un enigma complejo para desbloquear el dispositivo y acceder a la última pieza que necesita. ~",
+               "background": "p5_bg_6", 
+               "instrumental": "p5_guerra"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Este es el último obstáculo que me separa de la pieza que necesito. Debo resolverlo para completar mi misión.",
+               "background": "p5_bg_6", 
+               "instrumental": "p5_guerra"
+           },
+           {
+               "personaje": "Minijuego",
+               "frase": "", 
+               "background": "", 
+               "instrumental": ""          
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Después de desbloquear el dispositivo, Aldric obtiene la última pieza para su máquina del tiempo y escapa de la base militar sin ser detectado. ~",
+               "background": "p5_bg_7", 
+               "instrumental": "p5_guerra"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Lo conseguí! Al fin tengo la última pieza para la máquina del tiempo y puedo regresar a mi época. A pesar de los desafíos, lo logré. ~ En cuanto a ustedes… al igual que la semilla que crece y florece en tierra fértil, las dificultades del pasado nutren un futuro próspero y lleno de progreso. ~",
+               "background": "p5_bg_8", 
+               "instrumental": "p5_guerra"
+           }
+       ],
+       "pantalla6": [
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric regresa a su época y, emocionado, completa la máquina del tiempo. ~",
+               "background": "p6_bg_1", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Con gran anticipación, y deseo de cumplir su objetivo inicial, decide probarla una vez más, pero ahora viajará hacia el futuro. Configura la máquina para llevarlo varios siglos adelante y se lanza a la aventura. ~",
+               "background": "p6_bg_1", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Minijuego",
+               "frase": "", 
+               "background": "", 
+               "instrumental": ""          
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "¡Finalmente lo logré! Ahora es el momento de descubrir qué depara el futuro para la humanidad.",
+               "background": "p6_bg_1", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Al llegar al futuro, Aldric sale del laboratorio y se encuentra con una ciudad tecnológica, avanzada y próspera. ~",
+               "background": "p6_bg_2", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "¡Es increíble! Todo lo que he soñado y más. La humanidad realmente ha prosperado y creado un mundo maravilloso.",
+               "background": "p6_bg_2", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Mientras explora la ciudad, Aldric conoce a los habitantes del futuro, quienes le cuentan sobre los avances tecnológicos y cómo han mejorado la calidad de vida. Sin embargo, también comparten sus preocupaciones sobre la creciente dependencia de la tecnología y la pérdida de contacto humano. ~ ",
+               "background": "p6_bg_3", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Habitante del futuro",
+               "frase": "A pesar de nuestras maravillosas creaciones, la humanidad sigue buscando un equilibrio entre la tecnología y nuestra propia humanidad.",
+               "background": "p6_bg_3", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "~ Aldric reflexiona sobre las palabras del habitante del futuro y se da cuenta de que, aunque ha alcanzado su objetivo de viajar al futuro, su verdadero propósito es aprender de los errores del pasado y aplicar ese conocimiento para construir un mundo mejor. ~",
+               "background": "p6_bg_4", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Aldric",
+               "frase": "Entiendo lo que debo hacer ahora. Regresaré a mi tiempo y compartiré lo que he aprendido. Juntos, podemos construir un futuro mejor y más equilibrado.",
+               "background": "p6_bg_4", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "...",
+               "background": "p6_bg_5", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "...",
+               "background": "p6_bg_6", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "...",
+               "background": "p6_bg_7", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "...",
+               "background": "p6_bg_8", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "...",
+               "background": "p6_bg_9", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Narrador",
+               "frase": "Aunque Aldric creyó haber encontrado la utopía, la realidad era más sombría de lo que parecía. La humanidad había perdido su esencia en medio de la tecnología y el progreso.",
+               "background": "p6_bg_9", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "...",
+               "background": "p6_bg_5", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "...",
+               "background": "p6_bg_10", 
+               "instrumental": "p6_futuro"
+           },
+           {
+               "personaje": "Guion",
+               "frase": "FIN",
+               "background": "p6_bg_5", 
+               "instrumental": "p6_futuro"
+           }
+       ]
    },
    "menu": {
-      "jugar": "Nuevo Juego",
-      "configuracion": "Configuracion",
-      "salir": "Salir"
+       "jugar": "Nuevo Juego",
+       "configuracion": "Configuracion",
+       "salir": "Salir"
    },
    "configuraciones": {
-      "volumen": "Volumen",
-      "voces": "Narración por voz",
-      "activar": "Activar voces",
-      "idioma": "Idioma",
-      "espanol": "Español",
-      "ingles": "Inglés"
+       "volumen": "Volumen",
+       "voces": "Narración por voz",
+       "activar": "Activar voces",
+       "idioma": "Idioma",
+       "espanol": "Español",
+       "ingles": "Inglés"
    },
    "minijuegos": {
-      "minijuego_1": [
-         {
-            "instruccion": "Ayuda a Aldric a configurar la maquina del tiempo, su hora programada para el viaje es a las 7:50.",
-            "cambio": "Cambio",
-            "horas": "Horas",
-            "minutos": "Minutos",
-            "feedback": []
-         }
-      ],
-      "minijuego_2": [
-         {
-            "instruccion": "Ayuda a Aldric a encontrar la pieza, escucha el sonido que hace y selecciona el jarrón donde se encuentre.",
-            "feedback": []
-         }
-      ],
-      "minijuego_3": [
-         {
-            "instruccion": "Ayuda a Aldric a descifrar el mensaje oculto, para encontrar la siguiente pieza.",
-            "comprobar_texto": "Comprobar",
-            "feedback": []
-         }
-      ],
-      "minijuego_4": [
-         {
-            "instruccion": "Ayuda a Aldric a encontrar el camino correcto para encontrar el cofre.",
-            "feedback": []
-         }
-      ],
-      "minijuego_5": [
-         {
-            "instruccion": "Ayuda a Aldric a descifrar el patrón para desbloquear el cofre y encontrar la siguiente pieza.",
-            "abrir_cofre": "Abrir",
-            "feedback": []
-         }
-      ],
-      "minijuego_6": [
-         {
-            "instruccion": "Ayuda a Aldric a encontrar el patrón del dispositivo para encontrar la pieza.",
-            "abrir_dispositivo": "Abrir",
-            "feedback": []
-         }
-      ],
-      "minijuego_7": [
-         {
-            "instruccion": "Ayuda a Aldric encontrar la secuencia correcta para activar la maquina del tiempo.",
-            "secuencia_1": "Recolectar energía",
-            "secuencia_2": "Cargar el condensador",
-            "secuencia_3": "Alinear los circuitos",
-            "secuencia_4": "Estabilizar el campo de contención",
-            "secuencia_5": "Calibrar coordenadas",
-            "secuencia_6": "Ingresar fecha de destino",
-            "feedback": [
-               {
-                  "texto": "Consejo 1"
-               },
-               {
-                  "texto": "Consejo 2"
-               },
-               {
-                  "texto": "Consejo 3"
-               }
-            ]
-         }
-      ]
+       "minijuego_1": [
+           {
+               "instruccion": "Ayuda a Aldric a configurar la maquina del tiempo, su hora programada para el viaje es a las 7:50.",
+               "cambio": "Cambio",
+               "horas": "Horas",
+               "minutos": "Minutos",
+               "feedback": []
+           }
+       ],
+       "minijuego_2": [
+           {
+               "instruccion": "Ayuda a Aldric a encontrar la pieza, escucha el sonido que hace y selecciona el jarrón donde se encuentre.",
+               "feedback": []
+           }
+       ],
+       "minijuego_3": [
+           {
+               "instruccion": "Ayuda a Aldric a descifrar el mensaje oculto, para encontrar la siguiente pieza.",
+               "comprobar_texto": "Comprobar",
+               "feedback": []
+           }
+       ],
+       "minijuego_4": [
+           {
+               "instruccion": "Ayuda a Aldric a encontrar el camino correcto para encontrar el cofre.",
+               "feedback": []
+           }
+       ],
+       "minijuego_5": [
+           {
+               "instruccion": "Ayuda a Aldric a descifrar el patrón para desbloquear el cofre y encontrar la siguiente pieza.",
+               "abrir_cofre": "Abrir",
+               "feedback": []
+           }
+       ],
+       "minijuego_6": [
+           {
+               "instruccion": "Ayuda a Aldric a encontrar el patrón del dispositivo para encontrar la pieza.",
+               "abrir_dispositivo": "Abrir",
+               "feedback": []
+           }
+       ],
+       "minijuego_7": [
+           {
+               "instruccion": "Ayuda a Aldric encontrar la secuencia correcta para activar la maquina del tiempo.",
+               "secuencia_1": "Recolectar energía",
+               "secuencia_2": "Cargar el condensador",
+               "secuencia_3": "Alinear los circuitos",
+               "secuencia_4": "Estabilizar el campo de contención",
+               "secuencia_5": "Calibrar coordenadas",
+               "secuencia_6": "Ingresar fecha de destino",
+               "feedback": [
+                   {
+                       "texto": "Consejo 1"
+                   },
+                   {
+                       "texto": "Consejo 2"
+                   },
+                   {
+                       "texto": "Consejo 3"
+                   }
+               ]
+           }
+       ]
    }
 }
