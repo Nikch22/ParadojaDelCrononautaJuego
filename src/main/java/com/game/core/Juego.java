@@ -26,8 +26,10 @@ public class Juego {
     private Escenario escenarioActual;
     private String idioma;
     private String archivoDialogos;
+    public GameWindow ventanaPrincipal;
 
-    public Juego() {
+    public Juego(GameWindow ventanaPrincipal) {
+        this.ventanaPrincipal = ventanaPrincipal;
         // Aquí se inicializa el primer diálogo de la historia
         escenarioActual = new Escenario("/recursos/assets/imagenes/backgrounds/p1_bg_1.jpg");
         // Inicializar la historia y los minijuegos

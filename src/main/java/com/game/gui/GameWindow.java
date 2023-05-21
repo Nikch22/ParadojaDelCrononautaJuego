@@ -48,7 +48,7 @@ public class GameWindow extends JFrame {
         mainPanel.setOpaque(false); // Esto hace que el mainPanel sea transparente
 
         // Crear las diferentes "pantallas" del juego
-        juego = new Juego();
+        juego = new Juego(this);
         menuInicio = new MenuInicio(this);
         menuConfiguracion = new MenuConfiguracion(this);
 

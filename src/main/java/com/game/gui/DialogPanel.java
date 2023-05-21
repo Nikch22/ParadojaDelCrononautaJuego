@@ -22,7 +22,6 @@ import org.json.simple.JSONObject;
 import javazoom.jl.player.Player;
 import javazoom.jl.decoder.JavaLayerException;
 
-
 public class DialogPanel extends JPanel {
 
     private JLabel characterImageLabel;
@@ -37,6 +36,9 @@ public class DialogPanel extends JPanel {
     private String backgroundEscenarioActual;
     private String nuevoEscenarioPath;
     private String idiomaConfigurado = (String) GameSettings.getLanguage();
+    private boolean vocesActivadas = GameSettings.isVoiceNarrationEnabled();
+    // Agregar la variable de instancia audioPlayer
+    private Player audioPlayer;
 
     public DialogPanel(Map<String, ArrayList<JSONObject>> dialogosPorPantalla, Juego referenciaJuego) {
         this.referenciaJuego = referenciaJuego;
@@ -184,15 +186,6 @@ public class DialogPanel extends JPanel {
                 JSONObject dialogo = dialogos.get(pantallaActual).get(dialogoActual);
                 if (!dialogo.get("personaje").equals("Minijuego")) {
                     System.out.println(pantallaActual);
-                    //Si está activa la opción de narracion por voz
-                    if (GameSettings.isVoiceNarrationEnabled()) {
-                        String narracion = (String) dialogo.get("narracion");
-                        if (narracion != "") {
-                            String pathAudio = "/recursos/assets/audio/narraciones/" + idiomaConfigurado + "/" + narracion + ".mp3";
-                            System.out.println(pathAudio);
-                            playAudio(pathAudio);
-                        }
-                    }
 
                     String personaje = (String) dialogo.get("personaje");
                     String backgroundName = (String) dialogo.get("background");
@@ -209,6 +202,17 @@ public class DialogPanel extends JPanel {
                     }
                     setDialogCharacterImage(personaje);
                     setDialogText(frase);
+                    //Si está activa la opción de narracion por voz
+                    if (vocesActivadas) {
+                        String narracion = (String) dialogo.get("narracion");
+                        if (narracion != "") {
+                            // Detener el audio en curso antes de iniciar uno nuevo
+                            stopAudio();
+                            String pathAudio = "/recursos/assets/audio/narraciones/" + idiomaConfigurado + "/" + narracion + ".mp3";
+                            playAudio(pathAudio);
+
+                        }
+                    }
                 } else {
                     //Lógica del Minijuego
                     System.out.println("Se llama a Minijuego");
@@ -221,6 +225,7 @@ public class DialogPanel extends JPanel {
                     pantallaActual = "pantalla" + pantallaActualIndex;
                 } else {
                     System.out.println("Historia Terminada!");
+                    referenciaJuego.ventanaPrincipal.cambiarAPantalla("MenuInicio");
                 }
             }
         }
@@ -251,23 +256,41 @@ public class DialogPanel extends JPanel {
         escenarioActual.addPanel(DialogPanel.this, BorderLayout.SOUTH);
     }
 
-    public void playAudio(String audioPath) {
-        try {
-            // Obtén la URL del recurso
-            URL url = getClass().getResource(audioPath);
+    public void playAudio(final String audioPath) {
+        // Detener el audio en curso antes de iniciar uno nuevo
+        stopAudio();
+        // El resto del método playAudio() existente ...
+        SwingWorker<Void, Void> audioWorker = new SwingWorker<>() {
+            @Override
+            protected Void doInBackground() throws Exception {
+                try {
+                    URL url = getClass().getResource(audioPath);
+                    InputStream is = url.openStream();
+                    BufferedInputStream bis = new BufferedInputStream(is);
+                    // Almacenar el Player en la variable de instancia audioPlayer
+                    audioPlayer = new Player(bis);
+                    audioPlayer.play();
+                } catch (JavaLayerException | IOException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
 
-            // Crear un InputStream desde el recurso
-            InputStream is = url.openStream();
+            @Override
+            protected void done() {
+                // Libera la referencia al Player después de que termine de reproducir el audio
+                audioPlayer = null;
+            }
+        };
 
-            // Crear un BufferedInputStream para el InputStream
-            BufferedInputStream bis = new BufferedInputStream(is);
+        audioWorker.execute();
+    }
 
-            // Crear un Player de JLayer y reproducir el audio
-            Player player = new Player(bis);
-            player.play();
-
-        } catch (JavaLayerException | IOException e) {
-            e.printStackTrace();
+    public void stopAudio() {
+        // Si hay un audio en curso, detenerlo y liberar recursos
+        if (audioPlayer != null) {
+            audioPlayer.close();
+            audioPlayer = null;
         }
     }
 }
