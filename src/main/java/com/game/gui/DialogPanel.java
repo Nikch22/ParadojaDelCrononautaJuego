@@ -28,6 +28,8 @@ public class DialogPanel extends JPanel {
     private JTextPane dialogTextPane;
     private JLabel clickIconLabel;
     private Map<String, ArrayList<JSONObject>> dialogos;
+    String personaje;
+    String frase;
     private int dialogoActual = 0;
     private int pantallaActualIndex = 1;
     private String pantallaActual = "pantalla" + pantallaActualIndex;
@@ -187,10 +189,9 @@ public class DialogPanel extends JPanel {
                 if (!dialogo.get("personaje").equals("Minijuego")) {
                     System.out.println(pantallaActual);
 
-                    String personaje = (String) dialogo.get("personaje");
+                    personaje = (String) dialogo.get("personaje");
                     String backgroundName = (String) dialogo.get("background");
                     nuevoEscenarioPath = "/recursos/assets/imagenes/backgrounds/" + backgroundName + ".jpg";
-                    String frase;
                     if (!personaje.equals("Guion") && !personaje.equals("Narrador") && !personaje.equals("Script") && !personaje.equals("Narrator")) {
                         frase = (String) personaje + ": " + dialogo.get("frase");
                     } else {
@@ -207,7 +208,6 @@ public class DialogPanel extends JPanel {
                         String narracion = (String) dialogo.get("narracion");
                         if (narracion != "") {
                             // Detener el audio en curso antes de iniciar uno nuevo
-                            stopAudio();
                             String pathAudio = "/recursos/assets/audio/narraciones/" + idiomaConfigurado + "/" + narracion + ".mp3";
                             playAudio(pathAudio);
 
@@ -225,6 +225,12 @@ public class DialogPanel extends JPanel {
                     pantallaActual = "pantalla" + pantallaActualIndex;
                 } else {
                     System.out.println("Historia Terminada!");
+                    dialogoActual = 0;
+                    pantallaActualIndex = 1;
+                    pantallaActual = "pantalla1";
+                    frase = "";
+                    personaje = "";
+                    setNuevoEscenario("/recursos/assets/imagenes/backgrounds/p1_bg_1.jpg");
                     referenciaJuego.ventanaPrincipal.cambiarAPantalla("MenuInicio");
                 }
             }
@@ -259,6 +265,7 @@ public class DialogPanel extends JPanel {
     public void playAudio(final String audioPath) {
         // Detener el audio en curso antes de iniciar uno nuevo
         stopAudio();
+        
         // El resto del método playAudio() existente ...
         SwingWorker<Void, Void> audioWorker = new SwingWorker<>() {
             @Override
@@ -275,14 +282,14 @@ public class DialogPanel extends JPanel {
                 }
                 return null;
             }
-
+            
             @Override
             protected void done() {
                 // Libera la referencia al Player después de que termine de reproducir el audio
                 audioPlayer = null;
             }
         };
-
+        
         audioWorker.execute();
     }
 
@@ -293,4 +300,5 @@ public class DialogPanel extends JPanel {
             audioPlayer = null;
         }
     }
+
 }

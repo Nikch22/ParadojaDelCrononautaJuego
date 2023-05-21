@@ -16,6 +16,7 @@ import java.awt.*;
 import java.io.File;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -44,7 +45,15 @@ public class Juego {
         Map<String, ArrayList<JSONObject>> dialogosPorPantalla = cargarDialogos();
         // Crear un nuevo DialogPanel y agregarlo al escenario
         dialogPanel = new DialogPanel(dialogosPorPantalla, this);
-        
+        if (GameSettings.isVoiceNarrationEnabled()) {
+            String narracion = (String) dialogosPorPantalla.get("pantalla1").get(0).get("narracion");
+            if (narracion != "") {
+                // Detener el audio en curso antes de iniciar uno nuevo
+                String pathAudio = "/recursos/assets/audio/narraciones/" + idioma + "/" + narracion + ".mp3";
+                dialogPanel.playAudio(pathAudio);
+
+            }
+        }
         escenarioActual.addPanel(dialogPanel, BorderLayout.SOUTH);
     }
 
@@ -59,7 +68,7 @@ public class Juego {
             }
 
             InputStream inputStream = getClass().getResourceAsStream(archivoDialogos);
-            InputStreamReader reader = new InputStreamReader(inputStream);
+            InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
             JSONParser parser = new JSONParser();
             JSONObject jsonObject = (JSONObject) parser.parse(reader);
             /*InputStream inputStream = getClass().getResourceAsStream("/recursos/assets/idiomas/dialogos_es.json");
