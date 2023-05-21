@@ -14,8 +14,12 @@ public class MenuInicio extends Menu {
 
     public MenuInicio(GameWindow ventanaPrincipal) {
         this.ventanaPrincipal = ventanaPrincipal; // Inicializar la ventana principal
-        setBackground("/recursos/assets/imagenes/backgrounds/portada_es.png");
         String[] opciones = {"Nuevo Juego", "Ajustes", "Salir"};
+        if (GameSettings.getLanguage().equals("en")) {
+            String[] op = {"New Game", "Settings", "Exit"};
+            opciones = op;
+        }
+        setBackground("/recursos/assets/imagenes/backgrounds/portada_es.png");
 
         for (String opcion : opciones) {
             JButton button = createButton(opcion);

@@ -30,7 +30,7 @@ public abstract class Menu extends JPanel {
     }
 
     protected JButton createButton(String text) {
-        btnBgColor = new Color(145, 133, 122, 100);
+        btnBgColor = new Color(145, 133, 122, 125);
         btnHvBgColor = new Color(255, 211, 193, 70);
 
         JButton button = new TranslucentButton(text, btnBgColor, btnHvBgColor, new Font("Oswald", Font.BOLD, 26), new Dimension(200, 60), new Dimension(600, 60)); // Color de fondo translúcido;       
@@ -38,7 +38,7 @@ public abstract class Menu extends JPanel {
 
         //button.setContentAreaFilled(false);
         button.setBorderPainted(false);
-        button.setForeground(new Color(255, 255, 252, 100));
+        button.setForeground(new Color(255, 255, 252, 150));
         button.setAlignmentX(Component.CENTER_ALIGNMENT);
         return button;
     }

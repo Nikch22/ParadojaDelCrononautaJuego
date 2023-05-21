@@ -14,7 +14,6 @@ import javax.sound.sampled.*;
 public class Escenario extends JPanel {
 
     private ImagePanel imagePanel;
-    private Clip audioClip;
 
     public Escenario(String imagePath) {
         // Configuración inicial del panel
@@ -31,7 +30,7 @@ public class Escenario extends JPanel {
         // Obtener el tamaño de la pantalla, excluyendo la barra de tareas
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         Rectangle bounds = ge.getMaximumWindowBounds();
-        System.out.println(bounds.getSize());
+        //System.out.println(bounds.getSize());
         imagePanel.setPreferredSize(bounds.getSize());
 
         // Limpiar cualquier cosa que se esté mostrando en el panel y agregar el nuevo ImagePanel
@@ -44,29 +43,9 @@ public class Escenario extends JPanel {
         repaint();
     }
 
-    public void playAudio(String audioPath) {
-        try {
-            // Abrir el archivo de audio
-            AudioInputStream audioStream = AudioSystem.getAudioInputStream(getClass().getResource(audioPath));
-
-            // Obtener un clip de audio y cargarlo con el audio del stream
-            audioClip = AudioSystem.getClip();
-            audioClip.open(audioStream);
-
-            // Reproducir el clip
-            audioClip.start();
-            // Para que el audio se repita continuamente
-            //audioClip.loop(Clip.LOOP_CONTINUOUSLY);
-
-        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
-            e.printStackTrace();
-        }
-    }
-
     public void addPanel(JPanel panel, String position) {
         // Si la posición es "NORTH" o "SOUTH", asignamos el panel a esa posición
-        add(panel, position);
-        System.out.println("Escenario: " + position);
+        imagePanel.add(panel, position);
 
         // Asegurarse de que los cambios se apliquen
         revalidate();

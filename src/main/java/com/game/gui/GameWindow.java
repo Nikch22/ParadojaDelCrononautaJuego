@@ -18,21 +18,24 @@ public class GameWindow extends JFrame {
         setTitle("La Paradoja Del Crononauta");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //setPreferredSize(new Dimension(1920, 1080)); // Establece el 1080p preferido de la ventana.
-
+        setUndecorated(true);  // Esta línea oculta la barra de título y los bordes de la ventana
         // Evita que la ventana se redimensione
         setResizable(false);
 
         // Obtener el tamaño de la pantalla, excluyendo la barra de tareas
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        Rectangle bounds = ge.getMaximumWindowBounds();
-        setSize(bounds.getSize());
+//        Rectangle bounds = ge.getMaximumWindowBounds();
+//        setSize(bounds.getSize());
+        GraphicsDevice device = ge.getDefaultScreenDevice();
 
         // Establecer la ventana en la posición y el tamaño deseados
         setExtendedState(JFrame.MAXIMIZED_BOTH);
 //        setPreferredSize(bounds.getSize());
+        // Establece esta ventana como la ventana de pantalla completa
+//        device.setFullScreenWindow(this);
 
         setMinimumSize(new Dimension(912, 513)); // Establecer un tamaño mínimo si lo deseas
-        setLocation(bounds.getLocation());
+//        setLocation(bounds.getLocation());
 
         // Carga la imagen del ícono desde la carpeta de recursos
         ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource("recursos/assets/imagenes/iconos/game_icon.png"));
@@ -45,7 +48,7 @@ public class GameWindow extends JFrame {
         mainPanel.setOpaque(false); // Esto hace que el mainPanel sea transparente
 
         // Crear las diferentes "pantallas" del juego
-        juego = new Juego();
+        juego = new Juego(this);
         menuInicio = new MenuInicio(this);
         menuConfiguracion = new MenuConfiguracion(this);
 
