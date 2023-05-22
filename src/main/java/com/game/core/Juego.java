@@ -23,7 +23,7 @@ import java.util.Map;
 public class Juego {
 
     private Minijuego minijuegoActual;
-    private DialogPanel dialogPanel;
+    public DialogPanel dialogPanel;
     private Escenario escenarioActual;
     private String idioma;
     private String archivoDialogos;
@@ -38,23 +38,38 @@ public class Juego {
     }
 
     public void iniciarHistoria() {
+
         idioma = GameSettings.getLanguage();
         archivoDialogos = "/recursos/assets/idiomas/dialogos_" + idioma + ".json";
         System.out.println(GameSettings.getLanguage());
         // Llamas al método cargarDialogos y guardas el resultado en una variable
         Map<String, ArrayList<JSONObject>> dialogosPorPantalla = cargarDialogos();
-        // Crear un nuevo DialogPanel y agregarlo al escenario
-        dialogPanel = new DialogPanel(dialogosPorPantalla, this);
-        if (GameSettings.isVoiceNarrationEnabled()) {
-            String narracion = (String) dialogosPorPantalla.get("pantalla1").get(0).get("narracion");
-            if (narracion != "") {
-                // Detener el audio en curso antes de iniciar uno nuevo
-                String pathAudio = "/recursos/assets/audio/narraciones/" + idioma + "/" + narracion + ".mp3";
-                dialogPanel.playAudio(pathAudio);
+        if (dialogPanel == null) {
+            // Crear un nuevo DialogPanel y agregarlo al escenario
+            dialogPanel = new DialogPanel(dialogosPorPantalla, this);
+            if (GameSettings.isVoiceNarrationEnabled()) {
+                String narracion = (String) dialogosPorPantalla.get("pantalla1").get(0).get("narracion");
+                if (narracion != "") {
+                    // Detener el audio en curso antes de iniciar uno nuevo
+                    String pathAudio = "/recursos/assets/audio/narraciones/" + idioma + "/" + narracion + ".mp3";
+                    dialogPanel.playAudio(pathAudio);
 
+                }
             }
+            escenarioActual.addPanel(dialogPanel, BorderLayout.SOUTH);
+        } else {
+            if (GameSettings.isVoiceNarrationEnabled()) {
+                String narracion = (String) dialogosPorPantalla.get("pantalla1").get(0).get("narracion");
+                if (narracion != "") {
+                    // Detener el audio en curso antes de iniciar uno nuevo
+                    String pathAudio = "/recursos/assets/audio/narraciones/" + idioma + "/" + narracion + ".mp3";
+                    dialogPanel.playAudio(pathAudio);
+
+                }
+            }
+            // dialogPanel ya existe, resetear su estado
+            dialogPanel.resetPanel();
         }
-        escenarioActual.addPanel(dialogPanel, BorderLayout.SOUTH);
     }
 
     public Map<String, ArrayList<JSONObject>> cargarDialogos() {
