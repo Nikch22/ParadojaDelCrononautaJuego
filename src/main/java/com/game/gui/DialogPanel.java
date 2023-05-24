@@ -46,11 +46,14 @@ public class DialogPanel extends JPanel {
     private boolean vocesActivadas = GameSettings.isVoiceNarrationEnabled();
     // Agregar la variable de instancia audioPlayer
     private Player audioPlayer;
+    
+    public int i;
 
     public DialogPanel(Map<String, ArrayList<JSONObject>> dialogosPorPantalla, Juego referenciaJuego) {
         this.referenciaJuego = referenciaJuego;
         this.dialogos = dialogosPorPantalla;
-
+        i=0;
+        
         // Añade esta línea
         this.setBorder(new EmptyBorder(0, 0, 0, 0));
         // Asignno Background del panel de dialogos
@@ -251,10 +254,14 @@ public class DialogPanel extends JPanel {
                         }
                     }
                 } else {
-                    //Lógica del Minijuego
-                    Minijuego2 mj2 = new Minijuego2();
-                    mj2.inicio();
-                    System.out.println("Se llama a Minijuego");
+                    i++;
+                    if(i==2){
+                        //llama al Minijuego 2
+                        this.referenciaJuego.ventanaPrincipal.setEnabled(false);
+                        Minijuego2 mj2 = new Minijuego2(this.referenciaJuego.ventanaPrincipal);
+                        mj2.inicio();
+                        System.out.println("Se llama a Minijuego 2");
+                    }
                 }
 
             } else {

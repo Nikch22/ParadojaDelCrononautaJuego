@@ -7,6 +7,7 @@ package main.java.com.game.minijuegos;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import main.java.com.game.gui.GameWindow;
 
 import main.java.com.game.utils.Mj2Listener;
 
@@ -16,10 +17,11 @@ import main.java.com.game.utils.Mj2Listener;
  */
 public class Minijuego2 extends JPanel{
     int n;
+    public GameWindow ventanaPrincipal;
     
-    public Minijuego2(){
+    public Minijuego2(GameWindow ventanaPrincipal){
         this.n = 0;
-        //this.ventanaPrincipal = ventanaPrincipal; // Inicializar la ventana principal
+        this.ventanaPrincipal = ventanaPrincipal; // Inicializar la ventana principal
     }
     
     public void inicio(){
@@ -158,6 +160,9 @@ public class Minijuego2 extends JPanel{
                     if(finaln!=2){
                         inicio();
                     }
+                    else{
+                        fin();
+                    }
                     ventana.dispose();
                 }
             });
@@ -172,6 +177,9 @@ public class Minijuego2 extends JPanel{
                     if(finaln!=2){
                         inicio();
                     }
+                    else{
+                        fin();
+                    }
                     ventana.dispose();
                 }
             });
@@ -185,6 +193,9 @@ public class Minijuego2 extends JPanel{
                     }
                     if(finaln!=2){
                         inicio();
+                    }
+                    else{
+                        fin();
                     }
                     ventana.dispose();
                 }
@@ -240,4 +251,7 @@ public class Minijuego2 extends JPanel{
             ventana.setVisible(true); // Muestra la ventana
     }
     
+    public void fin(){
+        this.ventanaPrincipal.setEnabled(true);
+    }
 }
