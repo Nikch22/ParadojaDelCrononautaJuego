@@ -32,8 +32,10 @@ public class DialogPanel extends JPanel {
     private JLabel homeIconLabel;
     private JLabel exitIconLabel;
     private Map<String, ArrayList<JSONObject>> dialogos;
+    String initialDialogText;
     String personaje;
     String frase;
+    private String instrumental;
     private JPanel iconPanel;
     private int dialogoActual = 0;
     private int pantallaActualIndex = 1;
@@ -62,7 +64,7 @@ public class DialogPanel extends JPanel {
 
         String initialcharacter = (String) dialogos.get(pantallaActual).get(0).get("personaje");
         String characterImagePath = "/recursos/assets/imagenes/personajes/" + initialcharacter + ".png";
-        String initialDialogText = (String) initialcharacter + ": " + dialogos.get("pantalla1").get(0).get("frase");
+        initialDialogText = (String) initialcharacter + ": " + dialogos.get("pantalla1").get(0).get("frase");
         String clickIconPath = "/recursos/assets/imagenes/iconos/click_claro.png";
 
         // Cambiando el layout del panel
@@ -104,6 +106,7 @@ public class DialogPanel extends JPanel {
                 /* Sobrescribir para ignorar */ }
 
         };
+        //playAudio("/recursos/assets/audio/musica/"+ dialogos.get("pantalla1").get(0).get("instrumental") + ".mp3");
         dialogTextPane.setText(initialDialogText);
 
         // Configuración de la caja de texto
@@ -178,12 +181,7 @@ public class DialogPanel extends JPanel {
         // Agregar un MouseListener a los íconos de inicio y salida
         homeIconLabel.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-                dialogoActual = 0;
-                pantallaActualIndex = 1;
-                pantallaActual = "pantalla1";
-                frase = "";
-                personaje = "";
-                setNuevoEscenario("/recursos/assets/imagenes/backgrounds/p1_bg_1.jpg");
+                resetPanel();
                 // Aquí agregar la lógica para ir al inicio
                 referenciaJuego.ventanaPrincipal.cambiarAPantalla("MenuInicio");
             }
@@ -271,12 +269,7 @@ public class DialogPanel extends JPanel {
                     pantallaActual = "pantalla" + pantallaActualIndex;
                 } else {
                     System.out.println("Historia Terminada!");
-                    dialogoActual = 0;
-                    pantallaActualIndex = 1;
-                    pantallaActual = "pantalla1";
-                    frase = "";
-                    personaje = "";
-                    setNuevoEscenario("/recursos/assets/imagenes/backgrounds/p1_bg_1.jpg");
+                    resetPanel();
                     referenciaJuego.ventanaPrincipal.cambiarAPantalla("MenuInicio");
                 }
             }
@@ -303,7 +296,8 @@ public class DialogPanel extends JPanel {
     }
 
     public void setDialogText(String dialogText) {
-        dialogTextPane.setText(dialogText);
+        dialogTextPane.setText("");  // Limpia el JTextPane
+        dialogTextPane.setText(dialogText);  // Ajusta el nuevo texto
         StyledDocument doc = dialogTextPane.getStyledDocument();
         SimpleAttributeSet center = new SimpleAttributeSet();
         StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
@@ -317,6 +311,21 @@ public class DialogPanel extends JPanel {
         // Vuelve a agregar el panel de iconos al escenario
         referenciaJuego.getEscenarioActual().addPanel(iconPanel, BorderLayout.EAST);
         escenarioActual.addPanel(DialogPanel.this, BorderLayout.SOUTH);
+    }
+
+    public void resetPanel() {
+        // restablecer las variables a los valores iniciales
+        dialogoActual = 0;
+        pantallaActualIndex = 1;
+        pantallaActual = "pantalla1";
+        frase = initialDialogText ;
+        personaje = "";
+        vocesActivadas = GameSettings.isVoiceNarrationEnabled();
+        setDialogCharacterImage("Aldric");
+        setDialogText(frase);
+        // restablecer la UI a los valores iniciales
+        setNuevoEscenario("/recursos/assets/imagenes/backgrounds/p1_bg_1.jpg");
+        // El resto de la lógica para restablecer la UI...
     }
 
     public void playAudio(final String audioPath) {
@@ -369,16 +378,17 @@ public class DialogPanel extends JPanel {
         UIManager.put("Panel.background", new Color(50, 50, 50));  // Oscuro
         UIManager.put("Button.background", new Color(200, 200, 200));  // Gris claro
 
-        CustomDialog customDialog = new CustomDialog();
+        CustomDialog customDialog = new CustomDialog(GameSettings.getLanguage());
         Object[] options = {"Sí, salir", "No, quedarme"};  // Personalizar textos de los botones
+        Object[] optionsEn = {"Yes, quit", "No, stay"};
 
         int confirm = JOptionPane.showOptionDialog(
                 null,
                 customDialog,
-                "Solicitud de Confirmación",
+                GameSettings.getLanguage().equals("en") ? "Confirmation Request" : "Solicitud de Confirmación",
                 JOptionPane.YES_NO_OPTION,
                 JOptionPane.PLAIN_MESSAGE,
-                null, options, options[1]);
+                null, GameSettings.getLanguage().equals("en") ? optionsEn : options, options[1]);
         if (confirm == JOptionPane.YES_OPTION) {
             System.exit(0);
         }

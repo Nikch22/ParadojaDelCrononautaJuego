@@ -7,10 +7,7 @@ import java.awt.*;
 import java.io.IOException;
 import javax.sound.sampled.*;
 
-/**
- *
- * @author huals
- */
+
 public class Escenario extends JPanel {
 
     private ImagePanel imagePanel;

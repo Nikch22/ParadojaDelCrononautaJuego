@@ -81,16 +81,12 @@ public class GameWindow extends JFrame {
         cambiarAPantalla("Juego");
     }
 
-    // Método para iniciar el juego. Se llama cuando el jugador selecciona "Nuevo Juego" en el menú de inicio.
-    // public void iniciarJuego() {
-    /*escenario = new Escenario(); // Crea una nueva instancia del objeto Escenario.
+    public MenuInicio getMenuInicio() {
+        return menuInicio;
+    }
+    
+    public JPanel getMainPanel() {
+    return mainPanel;
+    }
 
-        // Añade el panel del escenario al panel principal.
-        mainPanel.add(escenario.getEscenarioPanel(), "EscenarioPanel");
-        DESCOMENTAR*/
-    // Cambia la vista del panel principal al panel del escenario.
-    /*   CardLayout layout = (CardLayout) mainPanel.getLayout();
-        layout.show(mainPanel, "EscenarioPanel");
-    }*/
-    // getters y setters...
 }
