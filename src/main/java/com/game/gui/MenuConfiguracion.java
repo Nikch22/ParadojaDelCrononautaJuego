@@ -7,10 +7,6 @@ import java.awt.event.*;
 import main.java.com.game.core.*;
 import main.java.com.game.common.Menu;
 
-/**
- *
- * @author huals
- */
 public class MenuConfiguracion extends Menu {
 
     private GameWindow ventanaPrincipal;

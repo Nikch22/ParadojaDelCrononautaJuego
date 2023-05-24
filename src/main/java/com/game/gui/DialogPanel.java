@@ -310,6 +310,7 @@ public class DialogPanel extends JPanel {
         pantallaActual = "pantalla1";
         frase = initialDialogText ;
         personaje = "";
+        vocesActivadas = GameSettings.isVoiceNarrationEnabled();
         setDialogCharacterImage("Aldric");
         setDialogText(frase);
         // restablecer la UI a los valores iniciales
