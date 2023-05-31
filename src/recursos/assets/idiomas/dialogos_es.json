@@ -6,77 +6,88 @@
                 "frase": "Después de tantos años de investigación y experimentos, finalmente lo he logrado... Viajar en el tiempo ya no será solo un sueño.",
                 "background": "p1_bg_1", 
                 "instrumental": "p1_laboratorio", 
-                "narracion": "p1_1_aldric"
+                "narracion" : "p1_1_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Aldric conecta unos cables a la máquina y toma un respiro profundo antes de encenderla. ~",
                 "background": "p1_bg_2", 
                 "instrumental": "p1_laboratorio", 
-                "narracion": ""
+                "narracion" : "p1_1_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Todo lo que necesito es ajustar las coordenadas... Establecer las fechas y... ¡listo!",
                 "background": "p1_bg_2", 
                 "instrumental": "p1_laboratorio", 
-                "narracion": "p1_2_aldric"
+                "narracion" : "p1_2_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Minijuego",
                 "frase": "", 
                 "background": "", 
                 "instrumental": "", 
-                "narracion": ""
+                "narracion" : "",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ La máquina comienza a zumbar y a brillar con una intensidad creciente. Aldric se acerca a la pantalla y observa con atención. ~",
                 "background": "p1_bg_1", 
                 "instrumental": "p1_laboratorio", 
-                "narracion": ""
+                "narracion" : "p1_2_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "¡Sí! ¡Lo estoy logrando! ¡Estoy viajando en el tiempo!",
                 "background": "p1_bg_3", 
                 "instrumental": "p1_laboratorio", 
-                "narracion": "p1_3_aldric"
+                "narracion" : "p1_3_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "¿Qué está pasando? ¡No, no, no! ¡Esto no debería estar sucediendo!",
                 "background": "p1_bg_3", 
                 "instrumental": "p1_laboratorio", 
-                "narracion": "p1_4_aldric"
+                "narracion" : "p1_4_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ El laboratorio se llena de humo y la máquina del tiempo se vuelve inestable. Aldric intenta apagarla, pero es demasiado tarde. ~",
                 "background": "p1_bg_4", 
                 "instrumental": "p1_laboratorio", 
-                "narracion": ""
+                "narracion" : "p1_3_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "¡No! ¡Tengo que detener esto!",
                 "background": "p1_bg_4", 
                 "instrumental": "p1_laboratorio", 
-                "narracion": "p1_5_aldric"
+                "narracion" : "p1_5_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Se produce una gran explosión y un destello de luz ciega a Aldric. ~ ",
                 "background": "p1_bg_4", 
                 "instrumental": "p1_laboratorio", 
-                "narracion": ""
+                "narracion" : "p1_4_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Cuando la luz se desvanece, Aldric ya no está en su laboratorio. Se encuentra en un lugar desconocido y aparentemente peligroso. ~",
                 "background": "p1_bg_4", 
                 "instrumental": "p1_laboratorio", 
-                "narracion": ""
+                "narracion" : "p1_5_guion",
+                "sonido": ""
             }
         ],
         "pantalla2": [
@@ -85,119 +96,136 @@
                 "frase": "~ Aldric se despierta en un lugar desconocido. ~",
                 "background": "p2_bg_1", 
                 "instrumental": "p2_grecia", 
-                "narracion": ""
+                "narracion" : "p2_1_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Desorientado y asustado, Aldric comienza a explorar el área. ~",
                 "background": "p2_bg_1", 
                 "instrumental": "p2_grecia", 
-                "narracion": ""
+                "narracion" : "p2_2_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "¿Dónde estoy? ¿Qué me ha ocurrido?",
                 "background": "p2_bg_2", 
                 "instrumental": "p2_grecia", 
-                "narracion": "p2_1_aldric"
+                "narracion" : "p2_1_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
-                "frase": "~ Súbitamente, un grupo de bandidos emerge de la niebla, armados y amenazantes. Aldric se prepara para enfrentarlos, pero un guerrero desconocido aparece y los enfrenta hábilmente, salvando a Aldric. ~",
+                "frase": "~ Súbitamente, un grupo de bandidos emerge de la niebla, armados y amenazantes. Alex se prepara para enfrentarlos, pero un guerrero desconocido aparece y los enfrenta hábilmente, salvando a Alex. ~",
                 "background": "p2_bg_3", 
                 "instrumental": "p2_grecia", 
-                "narracion": ""
+                "narracion" : "p2_3_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Darius",
                 "frase": "Esos bandidos no volverán a molestarte. ¿Quién eres y cómo has llegado a este lugar?",
                 "background": "p2_bg_3", 
                 "instrumental": "p2_grecia", 
-                "narracion": "p2_2_darius"
+                "narracion" : "p2_2_darius",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
-                "frase": "Gracias por salvarme. Mi nombre es Aldric. Soy un científico, y…creo que he viajado en el tiempo por accidente. No sé dónde me encuentro.",
+                "frase": "Gracias por salvarme. Mi nombre es Alex. Soy un científico, y…creo que he viajado en el tiempo por accidente. No sé dónde me encuentro.",
                 "background": "p2_bg_4", 
                 "instrumental": "p2_grecia", 
-                "narracion": "p2_3_aldric"
+                "narracion" : "p2_3_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Darius",
                 "frase": "Soy Darius. Aunque no comprendo del todo tu situación, te ayudaré a encontrar respuestas. Pero primero, debes aprender a sobrevivir en este mundo desconocido.",
                 "background": "p2_bg_4", 
                 "instrumental": "p2_grecia", 
-                "narracion": "p2_4_darius"
+                "narracion" : "p2_4_darius",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Aldric y Darius viajan juntos hacia un campamento oculto en las montañas. Darius le enseña a Aldric habilidades de supervivencia, como encender fuegos, buscar alimentos y defenderse de posibles amenazas. ~",
                 "background": "p2_bg_5", 
                 "instrumental": "p2_grecia", 
-                "narracion": ""
+                "narracion" : "p2_4_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Nunca imaginé que estaría aprendiendo a sobrevivir en la antigua Grecia.",
                 "background": "p2_bg_6", 
                 "instrumental": "p2_grecia", 
-                "narracion": "p2_5_aldric"
+                "narracion" : "p2_5_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Darius",
                 "frase": "Y yo jamás pensé que estaría enseñando a un hombre de otro tiempo.",
                 "background": "p2_bg_6", 
                 "instrumental": "p2_grecia", 
-                "narracion": "p2_6_darius"
+                "narracion" : "p2_6_darius",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ En el campamento, Darius comparte con Aldric historias sobre la antigua Grecia y sus misterios. ~",
                 "background": "p2_bg_7", 
                 "instrumental": "p2_grecia", 
-                "narracion": ""
+                "narracion" : "p2_5_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ A medida que conversan, Aldric sospecha que la pieza que necesita para su máquina del tiempo podría estar oculta en un antiguo templo protegido por desafíos y trampas. ~",
                 "background": "p2_bg_7", 
                 "instrumental": "p2_grecia", 
-                "narracion": ""
+                "narracion" : "p2_6_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Creo que ese templo podría albergar la pieza que necesito. ¿Me acompañarás, Darius?",
                 "background": "p2_bg_8", 
                 "instrumental": "p2_grecia", 
-                "narracion": "p2_7_aldric"
+                "narracion" : "p2_7_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Darius",
-                "frase": "Por supuesto, Aldric. Juntos enfrentaremos los desafíos y te ayudaré a encontrar lo que buscas.",
+                "frase": "Por supuesto, Alex. Juntos enfrentaremos los desafíos y te ayudaré a encontrar lo que buscas.",
                 "background": "p2_bg_8", 
                 "instrumental": "p2_grecia", 
-                "narracion": "p2_8_darius"
+                "narracion" : "p2_8_darius",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Aldric y Darius se adentran en el templo y trabajan juntos para superar obstáculos y trampas del templo. ~",
                 "background": "p2_bg_9", 
                 "instrumental": "p2_grecia", 
-                "narracion": ""
+                "narracion" : "p2_7_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Minijuego",
                 "frase": "", 
                 "background": "", 
                 "instrumental": "", 
-                "narracion": ""
+                "narracion" : "",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Hasta finalmente encontrar la pieza. ~",
                 "background": "p2_bg_9", 
                 "instrumental": "p2_grecia", 
-                "narracion": ""
+                "narracion" : "p2_8_guion",
+                "sonido": ""
             }
         ],
         "pantalla3": [
@@ -206,140 +234,160 @@
                 "frase": "~ Aldric es transportado a la época medieval y se encuentra en un bullicioso mercado lleno de comerciantes, músicos y campesinos. ~",
                 "background": "p3_bg_1", 
                 "instrumental": "p3_medieval", 
-                "narracion": ""
+                "narracion" : "p3_1_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Aldric explora el mercado con curiosidad. ~",
                 "background": "p3_bg_1", 
                 "instrumental": "p3_medieval", 
-                "narracion": ""
+                "narracion" : "p3_2_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "¿Dónde estoy ahora? Todo parece tan diferente...",
                 "background": "p3_bg_1", 
                 "instrumental": "p3_medieval", 
-                "narracion": "p3_1_aldric"
+                "narracion" : "p3_1_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ De repente, unos guardias se acercan a Aldric, intrigados por su extraña apariencia y comportamiento. ~",
                 "background": "p3_bg_2", 
                 "instrumental": "p3_medieval", 
-                "narracion": ""
+                "narracion" : "p3_3_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Guardia",
                 "frase": "¡Hola, forastero! No te hemos visto por aquí antes. ¿Quién eres y qué haces aquí?",
                 "background": "p3_bg_2", 
                 "instrumental": "p3_medieval", 
-                "narracion": "p3_2_guardia"
+                "narracion" : "p3_2_guardia",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
-                "frase": "Mi nombre es Aldric. Soy un científico... (~ se detiene, dudando en revelar su origen, en ese momento siente un repentino dolor de cabeza y ve la imagen de unas inscripciones~ ) ...y estoy buscando algo importante.",
+                "frase": "Mi nombre es Alex. Soy un científico... (~ se detiene, dudando en revelar su origen, en ese momento siente un repentino dolor de cabeza y ve la imagen de unas inscripciones~ ) ...y estoy buscando algo importante.",
                 "background": "p3_bg_2", 
                 "instrumental": "p3_medieval", 
-                "narracion": "p3_3_aldric"
+                "narracion" : "p3_3_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guardia",
                 "frase": "Tal vez deberías hablar con nuestro sabio anciano. Él conoce muchas historias y secretos de nuestro reino.",
                 "background": "p3_bg_2", 
                 "instrumental": "p3_medieval", 
-                "narracion": "p3_4_guardia"
+                "narracion" : "p3_4_guardia",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Los guardias llevan a Aldric con el sabio anciano, un hombre de aspecto amable y conocedor de los misterios del reino.~",
                 "background": "p3_bg_3", 
                 "instrumental": "p3_medieval", 
-                "narracion": ""
+                "narracion" : "p3_4_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Anciano",
                 "frase": "¿Qué buscas, joven viajero? Veo en tus ojos que vienes de lejos.",
                 "background": "p3_bg_4", 
                 "instrumental": "p3_medieval", 
-                "narracion": "p3_5_anciano"
+                "narracion" : "p3_5_anciano",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Mi nombre es Aldric. Soy un científico y he viajado en el tiempo. Necesito encontrar un mensaje oculto en una inscripción que contiene una pista para reparar mi máquina del tiempo y regresar a mi época.",
                 "background": "p3_bg_4", 
                 "instrumental": "p3_medieval", 
-                "narracion": "p3_6_aldric"
+                "narracion" : "p3_6_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ El Anciano, intrigado por la historia de Aldric, decide ayudarlo en su búsqueda. ~",
                 "background": "p3_bg_4", 
                 "instrumental": "p3_medieval", 
-                "narracion": ""
+                "narracion" : "p3_5_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Anciano",
                 "frase": "Creo conocer la inscripción de la que hablas, pero está en una torre abandonada, protegida por acertijos y trampas mortales. Si estás dispuesto a enfrentar esos desafíos, te guiaré hasta allí.",
                 "background": "p3_bg_4", 
                 "instrumental": "p3_medieval", 
-                "narracion": "p3_7_anciano"
+                "narracion" : "p3_7_anciano",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Aldric y el anciano emprenden la peligrosa travesía hacia la torre abandonada. Juntos, enfrentan los desafíos de la torre hasta encontrar las inscripciones antiguas. ~",
                 "background": "p3_bg_5", 
                 "instrumental": "p3_medieval", 
-                "narracion": ""
+                "narracion" : "p3_6_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Es increíble pensar que esta tierra, que parece tan primitiva, algún día se convertirá en el mundo moderno que conozco.",
                 "background": "p3_bg_6", 
                 "instrumental": "p3_medieval", 
-                "narracion": "p3_8_aldric"
+                "narracion" : "p3_8_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "~ ¿Cómo será el mundo del futuro?, necesito saberlo. ~",
                 "background": "p3_bg_7", 
                 "instrumental": "p3_medieval", 
-                "narracion": "p3_9_aldric"
+                "narracion" : "p3_9_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Anciano",
                 "frase": "Nuestro pasado siempre guarda secretos, pero también nos enseña valiosas lecciones.",
                 "background": "p3_bg_7", 
                 "instrumental": "p3_medieval", 
-                "narracion": "p3_10_anciano"
+                "narracion" : "p3_10_anciano",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Después de superar los obstáculos y trampas, Aldric y el anciano encuentran la inscripción en una cámara secreta de la torre. ~",
                 "background": "p3_bg_8", 
                 "instrumental": "p3_medieval", 
-                "narracion": ""
+                "narracion" : "p3_7_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Minijuego",
                 "frase": "", 
                 "background": "", 
                 "instrumental": "", 
-                "narracion": ""
+                "narracion" : "",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Aldric descifra el mensaje oculto, revelando la información que necesita para reparar su máquina del tiempo. ~",
                 "background": "p3_bg_8", 
                 "instrumental": "p3_medieval", 
-                "narracion": ""
+                "narracion" : "p3_8_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Anciano",
                 "frase": "Has demostrado ser un buscador incansable de la verdad. ¡Buena suerte en tu viaje, Aldric!",
                 "background": "p3_bg_8", 
                 "instrumental": "p3_medieval", 
-                "narracion": "p3_11_anciano"
+                "narracion" : "p3_11_anciano",
+                "sonido": ""
             }
         ],
         "pantalla4": [
@@ -348,140 +396,160 @@
                 "frase": "~ Aldric es transportado a una nueva época y se encuentra en una calle empedrada. Observa a su alrededor y nota que la gente viste de manera diferente y escucha murmullos sobre una revolución. ~",
                 "background": "p4_bg_1", 
                 "instrumental": "p4_revolucion", 
-                "narracion": ""
+                "narracion" : "p4_1_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "¿Dónde estoy ahora? No parece ni la antigua Grecia ni la época medieval...",
                 "background": "p4_bg_1", 
                 "instrumental": "p4_revolucion", 
-                "narracion": "p4_1_aldric"
+                "narracion" : "p4_1_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Transeunte",
                 "frase": "¡Estamos en plena Revolución Francesa, amigo! ¡Cuidado con los espías y los enemigos de la revolución!",
                 "background": "p4_bg_1", 
                 "instrumental": "p4_revolucion", 
-                "narracion": "p4_2_transeunte"
+                "narracion" : "p4_2_transeunte",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Aldric sigue investigando y escucha rumores sobre una caja con un mecanismo enigmático que se encuentra en el palacio real de Versalles. ~",
                 "background": "p4_bg_2", 
                 "instrumental": "p4_revolucion", 
-                "narracion": ""
+                "narracion" : "p4_2_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Con la información obtenida, Aldric decide buscar el palacio real de Versalles, donde espera encontrar la caja con el mecanismo que necesita. ~",
                 "background": "p4_bg_4", 
                 "instrumental": "p4_revolucion", 
-                "narracion": ""
+                "narracion" : "p4_3_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ En su búsqueda, se cruza con un espía enigmático llamado Jean. ~ ",
                 "background": "p4_bg_3", 
                 "instrumental": "p4_revolucion", 
-                "narracion": ""
+                "narracion" : "p4_4_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Jean",
                 "frase": "No puedo evitar notar que pareces perdido y desorientado. Tal vez pueda ofrecerte alguna información útil.",
                 "background": "p4_bg_3", 
                 "instrumental": "p4_revolucion", 
-                "narracion": "p4_3_jean"
+                "narracion" : "p4_3_jean",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Estoy buscando el palacio real de Versalles. Tengo que encontrar una caja que contiene un mecanismo importante para mi... propósito.",
                 "background": "p4_bg_3", 
                 "instrumental": "p4_revolucion", 
-                "narracion": "p4_4_aldric"
+                "narracion" : "p4_4_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Jean",
                 "frase": "El palacio de Versalles es un lugar lleno de misterios y secretos. Puedo darte algunas pistas para acceder a las áreas ocultas, pero tendrás que ser sigiloso y cuidadoso en tu búsqueda.",
                 "background": "p4_bg_4", 
                 "instrumental": "p4_revolucion", 
-                "narracion": "p4_5_jean"
+                "narracion" : "p4_5_jean",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Aldric llega al palacio real de Versalles y comienza a explorar sus laberínticos pasillos, siguiendo las pistas proporcionadas por Jean. ~",
                 "background": "p4_bg_5", 
                 "instrumental": "p4_revolucion", 
-                "narracion": ""
+                "narracion" : "p4_5_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Minijuego",
                 "frase": "", 
                 "background": "", 
                 "instrumental": "", 
-                "narracion": ""          
+                "narracion" : "",
+                "sonido": ""         
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Durante su búsqueda, descubre habitaciones ocultas y corredores secretos que revelan aspectos desconocidos de la vida en la corte. ~",
                 "background": "p4_bg_6", 
                 "instrumental": "p4_revolucion", 
-                "narracion": ""
+                "narracion" : "p4_6_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Nunca imaginé que este palacio sería tan complicado y misterioso.",
                 "background": "p4_bg_7", 
                 "instrumental": "p4_revolucion", 
-                "narracion": "p4_6_aldric"
+                "narracion" : "p4_6_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Luego de explorar bastante el intrincado palacio, Aldric encuentra la caja con el mecanismo que necesita. ~",
                 "background": "p4_bg_8", 
                 "instrumental": "p4_revolucion", 
-                "narracion": ""
+                "narracion" : "p4_7_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Para abrirla, debe resolver un desafío que requiere de toda su habilidad e ingenio. ~",
                 "background": "p4_bg_8", 
                 "instrumental": "p4_revolucion", 
-                "narracion": ""
+                "narracion" : "p4_8_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Este mecanismo parece difícil, pero sé que puedo con esto.",
                 "background": "p4_bg_8", 
                 "instrumental": "p4_revolucion", 
-                "narracion": "p4_7_aldric.mp3"
+                "narracion" : "p4_7_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Minijuego",
                 "frase": "", 
                 "background": "", 
                 "instrumental": "", 
-                "narracion": ""          
+                "narracion" : "",
+                "sonido": ""          
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Después de un arduo intento, Aldric resuelve el desafío y obtiene la pieza que necesita para reparar su máquina del tiempo. ~",
                 "background": "p4_bg_8", 
                 "instrumental": "p4_revolucion", 
-                "narracion": ""
+                "narracion" : "p4_9_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Lo logré. Tengo la pieza que necesito para mi máquina del tiempo. Ahora debo continuar mi camino y regresar a mi época. Gracias, Jean, por tu ayuda.",
                 "background": "p4_bg_9", 
                 "instrumental": "p4_revolucion", 
-                "narracion": "p4_8_aldric"
+                "narracion" : "p4_8_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Jean",
                 "frase": "Ha sido un placer. Aldric! Mientras continúas tu travesía, no olvides que lo que anhelamos puede tomar formas inesperadas. Buena suerte en tu viaje y dale buen uso a lo que has aprendido.",
                 "background": "p4_bg_9", 
                 "instrumental": "p4_revolucion", 
-                "narracion": "p4_9_jean"
+                "narracion" : "p4_9_jean",
+                "sonido": ""
             }
         ],
         "pantalla5": [
@@ -490,98 +558,112 @@
                 "frase": "~ Aldric se encuentra en una ciudad bombardeada, con edificios en ruinas y el sonido de las sirenas en la distancia. Está claro que está en una zona de guerra. ~",
                 "background": "p5_bg_1", 
                 "instrumental": "p5_guerra", 
-                "narracion": ""
+                "narracion" : "p5_1_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "¿Dónde estoy? Esta devastación... esos símbolos… ¿podría ser la Segunda Guerra Mundial? Debo encontrar esa última pieza para la máquina del tiempo y salir de aquí.",
                 "background": "p5_bg_1", 
                 "instrumental": "p5_guerra", 
-                "narracion": "p5_1_aldric"
+                "narracion" : "p5_1_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ En su búsqueda por la ciudad, Aldric se topa con un mensaje cifrado que contiene información sobre la ubicación de un dispositivo en una base militar. ~",
                 "background": "p5_bg_2", 
                 "instrumental": "p5_guerra", 
-                "narracion": ""
+                "narracion" : "p5_2_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Este mensaje cifrado podría ser la clave para encontrar el dispositivo que necesito. Pero primero, debo descifrarlo.",
                 "background": "p5_bg_2", 
                 "instrumental": "p5_guerra", 
-                "narracion": "p5_2_aldric"
+                "narracion" : "p5_2_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Aldric utiliza sus conocimientos para descifrar el mensaje. Descubre que el dispositivo está en una base militar cercana. ~",
                 "background": "p5_bg_3", 
                 "instrumental": "p5_guerra", 
-                "narracion": ""
+                "narracion" : "p5_3_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "La base militar no está lejos de aquí. Debo llegar allí y obtener el dispositivo sin ser detectado.",
                 "background": "p5_bg_3", 
                 "instrumental": "p5_guerra", 
-                "narracion": "p5_3_aldric"
+                "narracion" : "p5_3_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Aldric se dirige hacia la base militar, incursionando en terreno peligroso y sorteando los obstáculos es esta oscura guerra. ~",
                 "background": "p5_bg_3", 
                 "instrumental": "p5_guerra", 
-                "narracion": ""
+                "narracion" : "p5_4_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Al llegar a la base, Aldric se infiltra en ella y se dispone a buscar el dispositivo. Utiliza su conocimiento de la época y tácticas militares que aprendió de su tiempo en el ejercito cuando joven para pasar desapercibido. ~",
                 "background": "p5_bg_5", 
                 "instrumental": "p5_guerra", 
-                "narracion": ""
+                "narracion" : "p5_5_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "El éxito de mi misión depende de mi capacidad para pasar desapercibido y encontrar ese dispositivo.",
                 "background": "p5_bg_5", 
                 "instrumental": "p5_guerra", 
-                "narracion": "p5_4_aldric"
+                "narracion" : "p5_4_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Aldric finalmente encuentra el dispositivo en una sala secreta de la base. Debe resolver un enigma complejo para desbloquear el dispositivo y acceder a la última pieza que necesita. ~",
                 "background": "p5_bg_6", 
                 "instrumental": "p5_guerra", 
-                "narracion": ""
+                "narracion" : "p5_6_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Este es el último obstáculo que me separa de la pieza que necesito. Debo resolverlo para completar mi misión.",
                 "background": "p5_bg_6", 
                 "instrumental": "p5_guerra", 
-                "narracion": "p5_5_aldric"
+                "narracion" : "p5_5_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Minijuego",
                 "frase": "", 
                 "background": "", 
                 "instrumental": "", 
-                "narracion": ""          
+                "narracion" : "",
+                "sonido": ""          
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Después de desbloquear el dispositivo, Aldric obtiene la última pieza para su máquina del tiempo y escapa de la base militar sin ser detectado. ~",
                 "background": "p5_bg_7", 
                 "instrumental": "p5_guerra", 
-                "narracion": ""
+                "narracion" : "p5_7_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Lo conseguí! Al fin tengo la última pieza para la máquina del tiempo y puedo regresar a mi época. A pesar de los desafíos, lo logré. ~ En cuanto a ustedes… al igual que la semilla que crece y florece en tierra fértil, las dificultades del pasado nutren un futuro próspero y lleno de progreso. ~",
                 "background": "p5_bg_8", 
                 "instrumental": "p5_guerra", 
-                "narracion": "p5_6_aldric"
+                "narracion" : "p5_6_aldric",
+                "sonido": ""
             }
         ],
         "pantalla6": [
@@ -590,133 +672,152 @@
                 "frase": "~ Aldric regresa a su época y, emocionado, completa la máquina del tiempo. ~",
                 "background": "p6_bg_1", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "p6_1_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Con gran anticipación, y deseo de cumplir su objetivo inicial, decide probarla una vez más, pero ahora viajará hacia el futuro. Configura la máquina para llevarlo varios siglos adelante y se lanza a la aventura. ~",
                 "background": "p6_bg_1", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "p6_2_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Minijuego",
                 "frase": "", 
                 "background": "", 
                 "instrumental": "", 
-                "narracion": ""          
+                "narracion" : "",
+                "sonido": ""          
             },
             {
                 "personaje": "Aldric",
                 "frase": "¡Finalmente lo logré! Ahora es el momento de descubrir qué depara el futuro para la humanidad.",
                 "background": "p6_bg_1", 
                 "instrumental": "p6_futuro", 
-                "narracion": "p6_1_aldric"
+                "narracion" : "p6_1_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Al llegar al futuro, Aldric sale del laboratorio y se encuentra con una ciudad tecnológica, avanzada y próspera. ~",
                 "background": "p6_bg_2", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "p6_3_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "¡Es increíble! Todo lo que he soñado y más. La humanidad realmente ha prosperado y creado un mundo maravilloso.",
                 "background": "p6_bg_2", 
                 "instrumental": "p6_futuro", 
-                "narracion": "p6_2_aldric"
+                "narracion" : "p6_2_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Mientras explora la ciudad, Aldric conoce a los habitantes del futuro, quienes le cuentan sobre los avances tecnológicos y cómo han mejorado la calidad de vida. Sin embargo, también comparten sus preocupaciones sobre la creciente dependencia de la tecnología y la pérdida de contacto humano. ~ ",
                 "background": "p6_bg_3", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "p6_4_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Habitante del futuro",
                 "frase": "A pesar de nuestras maravillosas creaciones, la humanidad sigue buscando un equilibrio entre la tecnología y nuestra propia humanidad.",
                 "background": "p6_bg_3", 
                 "instrumental": "p6_futuro", 
-                "narracion": "p6_3_habitante"
+                "narracion" : "p6_3_habitante",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "~ Aldric reflexiona sobre las palabras del habitante del futuro y se da cuenta de que, aunque ha alcanzado su objetivo de viajar al futuro, su verdadero propósito es aprender de los errores del pasado y aplicar ese conocimiento para construir un mundo mejor. ~",
                 "background": "p6_bg_4", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "p6_5_guion",
+                "sonido": ""
             },
             {
                 "personaje": "Aldric",
                 "frase": "Entiendo lo que debo hacer ahora. Regresaré a mi tiempo y compartiré lo que he aprendido. Juntos, podemos construir un futuro mejor y más equilibrado.",
                 "background": "p6_bg_4", 
                 "instrumental": "p6_futuro", 
-                "narracion": "p6_4_aldric"
+                "narracion" : "p6_4_aldric",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "...",
                 "background": "p6_bg_5", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "...",
                 "background": "p6_bg_6", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "...",
                 "background": "p6_bg_7", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "...",
                 "background": "p6_bg_8", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "...",
                 "background": "p6_bg_9", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "",
+                "sonido": ""
             },
             {
                 "personaje": "Narrador",
                 "frase": "Aunque Aldric creyó haber encontrado la utopía, la realidad era más sombría de lo que parecía. La humanidad había perdido su esencia en medio de la tecnología y el progreso.",
                 "background": "p6_bg_9", 
                 "instrumental": "p6_futuro", 
-                "narracion": "p6_5_narrador"
+                "narracion" : "p6_5_narrador",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "...",
                 "background": "p6_bg_5", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "...",
                 "background": "p6_bg_10", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "",
+                "sonido": ""
             },
             {
                 "personaje": "Guion",
                 "frase": "FIN",
                 "background": "p6_bg_5", 
                 "instrumental": "p6_futuro", 
-                "narracion": ""
+                "narracion" : "",
+                "sonido": ""
             }
         ]
     },
@@ -799,4 +900,4 @@
             }
         ]
     }
-}
+ }

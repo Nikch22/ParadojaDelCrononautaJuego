@@ -10,6 +10,17 @@ import java.util.Map;
 import java.net.URL;
 import java.io.InputStream;
 import java.io.BufferedInputStream;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.FloatControl;
+import javax.sound.sampled.LineEvent;
+import javax.sound.sampled.LineListener;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.SourceDataLine;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.MouseInputAdapter;
 import javax.swing.text.Caret;
@@ -38,6 +49,7 @@ public class DialogPanel extends JPanel {
     private JPanel iconPanel;
     private int dialogoActual = 0;
     private int pantallaActualIndex = 1;
+    private int pantallaAntiguaIndex = pantallaActualIndex;
     private String pantallaActual = "pantalla" + pantallaActualIndex;
     private Image backgroundImage;
     private Juego referenciaJuego;
@@ -47,6 +59,12 @@ public class DialogPanel extends JPanel {
     private boolean vocesActivadas = GameSettings.isVoiceNarrationEnabled();
     // Agregar la variable de instancia audioPlayer
     private Player audioPlayer;
+    private Clip instrumentalClip;
+    private Clip voiceClip;
+
+    public void setVoiceClip(Clip voiceClip) {
+        this.voiceClip = voiceClip;
+    }
 
     public DialogPanel(Map<String, ArrayList<JSONObject>> dialogosPorPantalla, Juego referenciaJuego) {
         this.referenciaJuego = referenciaJuego;
@@ -102,7 +120,7 @@ public class DialogPanel extends JPanel {
                 /* Sobrescribir para ignorar */ }
 
         };
-        //playAudio("/recursos/assets/audio/musica/"+ dialogos.get("pantalla1").get(0).get("instrumental") + ".mp3");
+        instrumentalClip = playAudio("/recursos/assets/audio/musica/" + dialogos.get("pantalla1").get(0).get("instrumental") + ".wav", 0.6f);
         dialogTextPane.setText(initialDialogText);
 
         // Configuración de la caja de texto
@@ -223,6 +241,12 @@ public class DialogPanel extends JPanel {
                 if (!dialogo.get("personaje").equals("Minijuego")) {
                     System.out.println(pantallaActual);
 
+                    if (pantallaActualIndex > pantallaAntiguaIndex) {
+                        instrumentalClip.stop();
+                        instrumentalClip = playAudio("/recursos/assets/audio/musica/" + dialogo.get("instrumental") + ".wav", 0.6f);
+                        pantallaAntiguaIndex = pantallaActualIndex;
+                    }
+
                     personaje = (String) dialogo.get("personaje");
                     String backgroundName = (String) dialogo.get("background");
                     nuevoEscenarioPath = "/recursos/assets/imagenes/backgrounds/" + backgroundName + ".jpg";
@@ -242,8 +266,9 @@ public class DialogPanel extends JPanel {
                         String narracion = (String) dialogo.get("narracion");
                         if (narracion != "") {
                             // Detener el audio en curso antes de iniciar uno nuevo
-                            String pathAudio = "/recursos/assets/audio/narraciones/" + idiomaConfigurado + "/" + narracion + ".mp3";
-                            playAudio(pathAudio);
+                            String pathAudio = "/recursos/assets/audio/narraciones/" + idiomaConfigurado + "/" + narracion + ".wav";
+                            voiceClip.stop();
+                            voiceClip = playAudio(pathAudio);
 
                         }
                     }
@@ -258,6 +283,7 @@ public class DialogPanel extends JPanel {
                     pantallaActualIndex++;
                     pantallaActual = "pantalla" + pantallaActualIndex;
                 } else {
+                    instrumentalClip.stop();
                     System.out.println("Historia Terminada!");
                     resetPanel();
                     referenciaJuego.ventanaPrincipal.cambiarAPantalla("MenuInicio");
@@ -307,8 +333,9 @@ public class DialogPanel extends JPanel {
         // restablecer las variables a los valores iniciales
         dialogoActual = 0;
         pantallaActualIndex = 1;
+        pantallaAntiguaIndex = pantallaActualIndex;
         pantallaActual = "pantalla1";
-        frase = initialDialogText ;
+        frase = initialDialogText;
         personaje = "";
         vocesActivadas = GameSettings.isVoiceNarrationEnabled();
         setDialogCharacterImage("Aldric");
@@ -318,39 +345,62 @@ public class DialogPanel extends JPanel {
         // El resto de la lógica para restablecer la UI...
     }
 
-    public void playAudio(final String audioPath) {
-        // Detener el audio en curso antes de iniciar uno nuevo
-        stopAudio();
+    private float volumeToDB(float volume) {
+        // El rango válido de valores de volumen está entre 0.0f y 1.0f
+        final float MIN_VOLUME = 0.0f;
+        final float MAX_VOLUME = 1.0f;
 
-        // El resto del método playAudio() existente ...
-        SwingWorker<Void, Void> audioWorker = new SwingWorker<>() {
-            @Override
-            protected Void doInBackground() throws Exception {
-                try {
-                    URL url = getClass().getResource(audioPath);
-                    InputStream is = url.openStream();
-                    BufferedInputStream bis = new BufferedInputStream(is);
-                    // Almacenar el Player en la variable de instancia audioPlayer
-                    audioPlayer = new Player(bis);
-                    audioPlayer.play();
-                } catch (JavaLayerException | IOException e) {
-                    e.printStackTrace();
-                }
-                return null;
-            }
+        // El rango válido de valores de decibelios (dB) está entre -80.0f y 6.0206f
+        final float MIN_DB = -80.0f;
+        final float MAX_DB = 6.0206f;
 
-            @Override
-            protected void done() {
-                // Libera la referencia al Player después de que termine de reproducir el audio
-                audioPlayer = null;
-            }
-        };
+        // Convierte el valor de volumen en el rango [MIN_VOLUME, MAX_VOLUME] a decibelios (dB) en el rango [MIN_DB, MAX_DB]
+        float volumeRange = MAX_VOLUME - MIN_VOLUME;
+        float dbRange = MAX_DB - MIN_DB;
+        float db = ((volume - MIN_VOLUME) / volumeRange) * dbRange + MIN_DB;
 
-        audioWorker.execute();
+        return db;
     }
 
+    public Clip playAudio(final String audioPath, final float volume) {
+    final Clip[] clipHolder = new Clip[1];
+
+    try {
+        URL url = getClass().getResource(audioPath);
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(url);
+        clipHolder[0] = AudioSystem.getClip();
+        clipHolder[0].open(audioInputStream);
+        FloatControl gainControl = (FloatControl) clipHolder[0].getControl(FloatControl.Type.MASTER_GAIN);
+        float gain = volumeToDB(volume);
+        gainControl.setValue(gain);
+
+        // Agrega un LineListener para detectar cuando el audio termine de reproducirse
+        clipHolder[0].addLineListener(new LineListener() {
+            @Override
+            public void update(LineEvent event) {
+                if (event.getType() == LineEvent.Type.STOP) {
+                    // Libera los recursos después de que el audio termine de reproducirse
+                    clipHolder[0].close();
+                }
+            }
+        });
+
+        // Reproduce el audio
+        clipHolder[0].start();
+    } catch (UnsupportedAudioFileException | LineUnavailableException | IOException e) {
+        e.printStackTrace();
+    }
+
+    return clipHolder[0];
+    }
+
+public Clip playAudio(final String audioPath) {
+    float volume = 1.0f;
+    return playAudio(audioPath, volume);
+}
+
     public void stopAudio() {
-        // Si hay un audio en curso, detenerlo y liberar recursos
+        // Detener el audio en curso
         if (audioPlayer != null) {
             audioPlayer.close();
             audioPlayer = null;

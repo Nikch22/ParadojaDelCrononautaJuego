@@ -51,8 +51,8 @@ public class Juego {
                 String narracion = (String) dialogosPorPantalla.get("pantalla1").get(0).get("narracion");
                 if (narracion != "") {
                     // Detener el audio en curso antes de iniciar uno nuevo
-                    String pathAudio = "/recursos/assets/audio/narraciones/" + idioma + "/" + narracion + ".mp3";
-                    dialogPanel.playAudio(pathAudio);
+                    String pathAudio = "/recursos/assets/audio/narraciones/" + idioma + "/" + narracion + ".wav";
+                    dialogPanel.setVoiceClip(dialogPanel.playAudio(pathAudio));
 
                 }
             }
@@ -62,8 +62,8 @@ public class Juego {
                 String narracion = (String) dialogosPorPantalla.get("pantalla1").get(0).get("narracion");
                 if (narracion != "") {
                     // Detener el audio en curso antes de iniciar uno nuevo
-                    String pathAudio = "/recursos/assets/audio/narraciones/" + idioma + "/" + narracion + ".mp3";
-                    dialogPanel.playAudio(pathAudio);
+                    String pathAudio = "/recursos/assets/audio/narraciones/" + idioma + "/" + narracion + ".wav";
+                    dialogPanel.setVoiceClip(dialogPanel.playAudio(pathAudio));
 
                 }
             }
