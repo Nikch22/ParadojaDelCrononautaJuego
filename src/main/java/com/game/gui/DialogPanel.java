@@ -120,7 +120,7 @@ public class DialogPanel extends JPanel {
                 /* Sobrescribir para ignorar */ }
 
         };
-        instrumentalClip = playAudio("/recursos/assets/audio/musica/" + dialogos.get("pantalla1").get(0).get("instrumental") + ".wav", 0.6f);
+        instrumentalClip = playAudio("/recursos/assets/audio/musica/" + dialogos.get("pantalla1").get(0).get("instrumental") + ".wav", 0.75f);
         dialogTextPane.setText(initialDialogText);
 
         // Configuración de la caja de texto
@@ -243,7 +243,7 @@ public class DialogPanel extends JPanel {
 
                     if (pantallaActualIndex > pantallaAntiguaIndex) {
                         instrumentalClip.stop();
-                        instrumentalClip = playAudio("/recursos/assets/audio/musica/" + dialogo.get("instrumental") + ".wav", 0.6f);
+                        instrumentalClip = playAudio("/recursos/assets/audio/musica/" + dialogo.get("instrumental") + ".wav", 0.75f);
                         pantallaAntiguaIndex = pantallaActualIndex;
                     }
 
